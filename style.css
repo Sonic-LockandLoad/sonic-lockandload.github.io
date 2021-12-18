@@ -26,6 +26,15 @@ a:hover { color: #858bff }
     margin: auto;
     max-width: 750px;
 }
+@media only screen and (max-width: 749px) {
+    #content {
+        max-width: 95%;
+    }
+    #logo {
+        width: 200px;
+        padding: 15px;
+    }
+}
 #separator {
     padding: 3px;
     border: none;
