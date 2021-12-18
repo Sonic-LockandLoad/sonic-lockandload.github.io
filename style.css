@@ -9,7 +9,10 @@ body {
 }
 h1, h2, h3 {
     line-height: 1.2;
+    text-align: center;
 }
+
+img { width: 100%; }
 
 #logo {
     width: 400px;
