@@ -4,7 +4,24 @@ body {
     margin: auto;
     max-width: 100%;
     font-family: sans-serif;
+    line-height: 1.4;
+    font-size: 16px;
 }
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+#logo {
+    width: 400px;
+    padding: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #b4b6e2;
+}
+a:hover { color: #858bff }
+
 #content {
     margin: auto;
     max-width: 750px;
@@ -16,7 +33,9 @@ body {
     background: linear-gradient(90deg, #0003a8 0%, #00add0 50%, #cf00ca 100%);
     max-width: 100%;
 }
-#logo {
-    width: 400px;
-    padding: 15px;
+
+#links   { padding: 5px 25px; }
+#links a { 
+    padding-right: 10px; 
+    font-weight: bold;
 }
