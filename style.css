@@ -22,6 +22,7 @@ img { max-width: 100%; }
 a {
     text-decoration: none;
     color: #b4b6e2;
+    transition: 0.1s;
 }
 a:hover { color: #858bff }
 
@@ -55,4 +56,24 @@ a:hover { color: #858bff }
 .releases {
     max-width: 700px;
     margin: auto;
+}
+
+.story-link, .story-nlnk {
+    width: 65%;
+    padding: 15px 20px;
+    margin: 5px auto;
+    text-align: center;
+    font-size: 22px;
+    transition: 0.1s;
+    user-select: none;
+}
+.story-link {
+    color: white;
+    background-color: #787996;
+}
+.story-link:hover { background-color: #4c5096; }
+.story-link:active{ color: #7c72aa; background-color: #242877; }
+.story-nlnk {
+    color: #c4c4c4;
+    background-color: #979797;
 }
