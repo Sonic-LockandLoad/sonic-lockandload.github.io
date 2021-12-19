@@ -30,15 +30,6 @@ a:hover { color: #858bff }
     margin: auto;
     max-width: 750px;
 }
-@media only screen and (max-width: 749px) {
-    #content {
-        max-width: 95%;
-    }
-    #logo {
-        width: 200px;
-        padding: 15px;
-    }
-}
 #separator {
     padding: 3px;
     border: none;
@@ -76,4 +67,20 @@ a:hover { color: #858bff }
 .story-nlnk {
     color: #c4c4c4;
     background-color: #979797;
+}
+#footer {
+    text-align: center;
+    font-size: 80%;
+}
+
+@media only screen and (max-width: 810px) {
+    #footer { font-size: 70%; }
+    #content { max-width: 95%; }
+    #links { text-align: center; }
+    #logo {
+        width: 200px;
+        display: block;
+        padding: 15px;
+        margin: 0px auto;
+    }
 }
