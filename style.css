@@ -51,3 +51,8 @@ a:hover { color: #858bff }
     padding-right: 10px; 
     font-weight: bold;
 }
+
+.releases {
+    max-width: 700px;
+    margin: auto;
+}
