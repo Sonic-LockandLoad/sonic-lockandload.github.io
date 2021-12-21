@@ -95,7 +95,7 @@ a:hover { color: #858bff }
 }
 
 /* Hides the header if the window height is too small */
-@media only screen and (max-height: 450px) {
+@media only screen and (max-height: 700px) {
     #header {
         position: relative;
     }
