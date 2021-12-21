@@ -79,9 +79,9 @@ a:active { color: #363B8E; }
 }
 .story-link {
     color: white;
-    background-color: #787996;
+    background-color: #4c5096;
 }
-.story-link:hover { background-color: #4c5096; }
+.story-link:hover { background-color: #6167d8; }
 .story-link:active{ color: #7c72aa; background-color: #242877; }
 .story-nlnk {
     color: #c4c4c4;
