@@ -15,15 +15,16 @@ h1, h2, h3 {
 
 #content img {
     max-width: 100%;
+    border: 5px solid;
+    border-image: linear-gradient(150deg, #013DB4 25%, #FA3295 50%, #013DB4 75%) 1;
 }
 
 a {
-    text-decoration: none;
-    color: #d0d0ff;
+    color: #e954a5;
     transition: 0.1s;
 }
-a:hover  { color: white; }
-a:active { color: #888888; }
+a:hover  { color: #b37cd3; }
+a:active { color: #7d38a5; }
 
 #content {
     margin: auto;
@@ -39,27 +40,34 @@ a:active { color: #888888; }
 
 #header {
     position: sticky;
-    background-color: #292929;
+    color: white;
+    background: linear-gradient(130deg, #013DB4 0%, #046bca 30%, #f93295 100%);
     top: 0;
     width: 100%;
 }
+#header a, #footer a {
+    color: #dddddd;
+}
 #logo {
     display: block;
-    width: 400px;
+    width: 300px;
     padding: 15px;
     margin: auto;
+    filter: drop-shadow(1px 3px 5px #00000044);
 }
-
-#links { text-align: center; }
 
 #footer {
     text-align: center;
     font-size: 80%;
-    background-color: #292929;
+    color: white;
+    background: linear-gradient(130deg, #013DB4 0%, #046bca 30%, #f93295 100%);
     padding-bottom: 5px;
 }
 
-#links   { padding: 5px 25px; }
+#links {
+    text-align: center; 
+    padding: auto 25px;
+}
 #links a { 
     padding-right: 10px; 
     font-weight: bold;
@@ -68,6 +76,9 @@ a:active { color: #888888; }
 .releases {
     max-width: 700px;
     margin: auto;
+}
+#header a {
+    color: #eeeeee;
 }
 
 #character {
@@ -85,7 +96,7 @@ a:active { color: #888888; }
 }
 
 /* Hides the header if the window height is too small */
-@media only screen and (max-height: 700px) {
+@media only screen and (max-height: 800px) {
     #header {
         position: relative;
     }
