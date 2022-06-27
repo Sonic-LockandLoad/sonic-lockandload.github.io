@@ -102,6 +102,17 @@ kbd {
     padding-left: 20px;
 }
 
+.version-headsup {
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    padding-top: 20px;
+}
+@media only screen and (max-width: 300px)
+{
+    .version-headsup { width: 250px; }
+}
+
 /* Mobile view */
 @media only screen and (max-width: 810px) {
     #footer { font-size: 70%; }
