@@ -28,6 +28,10 @@ a {
 a:hover  { color: #b37cd3; }
 a:active { color: #7d38a5; }
 
+li {
+    line-height: 1.8;
+}
+
 kbd {
     font-family: "Source Code Pro", monospace;
     font-size: 90%;
