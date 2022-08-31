@@ -91,6 +91,27 @@ kbd {
     font-weight: bold;
 }
 
+#box-link { 
+    color: white;
+    text-decoration: none;
+    line-height: 1.2;
+}
+#box-link div {
+    background-color: #505ab9;
+    padding: 2px 25px;
+    margin: 20px;
+    box-shadow: 5px 5px 0px 0px #0000006b;
+    transition: .2s;
+}
+#box-link div:hover {
+    background-color: #6a74ce;
+    box-shadow: 7px 7px 0px 0px #00000091;
+}
+#box-link div:active {
+    background-color: #333d9b;
+    box-shadow: 0px 0px 0px 0px #000000;
+}
+
 .releases {
     max-width: 700px;
     margin: auto;
@@ -104,17 +125,6 @@ kbd {
     display: inline;
     float: right;
     padding-left: 20px;
-}
-
-.version-headsup {
-    text-align: center;
-    width: 300px;
-    margin: auto;
-    padding-top: 20px;
-}
-@media only screen and (max-width: 300px)
-{
-    .version-headsup { width: 250px; }
 }
 
 /* Mobile view */

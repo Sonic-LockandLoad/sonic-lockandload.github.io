@@ -5,9 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta property="type" content="website">
 		<meta property="url" content="https://sonic-lockandload.github.io">
-		<meta property="title" content="Sonic: Lock &amp; Load">
+		<meta property="title" content="Sonic: Lock &amp; Load - Instructions">
         <meta property="author" content="Arsalan Kazmi">
-		<meta property="description" content="A first-person shooter on the GZDoom source port based on the Sonic the Hedgehog series.">
+		<meta property="description" content="Instructions on how to install and play the game.">
         <meta property="image" content="banner.png">
         <meta property="image:type" content="image/png">
         <meta property="image:width" content="730">
@@ -19,7 +19,7 @@
         <div id="header">
             <a href="index.html"><img src="Sonic-LockandLoadLogo.png" id="logo"/></a>
             <div id="links">
-                <a href="index.html">Home</a> <a href="questions.html">FAQ</a> <a href="instructions.html">Installing</a> <a href="characters.html">Characters</a> <a href="https://github.com/Sonic-LockandLoad/Sonic-LockandLoad">GitHub <i class="fas fa-external-link-alt"></i></a>
+                <a href="index.html">Home</a> <a href="about.html">About</a> <a href="dlc.html">DLC</a> <a href="https://github.com/Sonic-LockandLoad/Sonic-LockandLoad">GitHub <i class="fas fa-external-link-alt"></i></a>
             </div>
             <hr id="separator">
         </div>
@@ -32,11 +32,20 @@
                 <li>The latest GZDoom release (you can get GZDoom from <a href="https://zdoom.org/downloads">zdoom.org</a>)</li>
             </ul>
             <h2>Setting up GZDoom</h2>
-            <p><strong>If you've already set up GZDoom (e.g. you've played GZDoom mods before), you can skip this step.</strong></p>
+            <p style="color:lime;">If you've already set up GZDoom, you can skip this step.</p>
             <p>Download and unzip GZDoom's folder (Windows/Mac) or install it through your package manager (Linux) if you haven't already.</p>
-            <p>Take your <code>DOOM2.WAD</code> file and put it next to <code>gzdoom.exe</code> (Windows), in /Users/&lt;username&gt;/Documents/GZDoom/ folder (Mac) or in ~/.local/share/games/doom (Linux).</p>
+            <p>
+                Take your <code>DOOM2.WAD</code> file and put it:
+                <ul>
+                    <li>next to <code>gzdoom.exe</code> (Windows)</li>
+                    <li>in <code>/Users/&lt;username&gt;/Documents/GZDoom/</code> (Mac)</li>
+                    <li>in <code>~/.local/share/games/doom</code> (Linux)</li>
+                </ul>
+            </p>
             <h2>Running the game</h2>
-            <p>Take <code>Sonic-LockandLoad-vX.X.X</code> or <code>Sonic-LockandLoad-edge</code> file (with a .zip or .pk3 extension) and drag and drop it on top of <code>gzdoom.exe</code> (Windows) or run the file with GZDoom on the command line, e.g. <code>gzdoom -file Sonic-LockandLoad-v1.3.3.pk3</code> (Mac/Linux)</p>
+            <p>Windows and Linux users can use <a href="https://zdoom.org/wiki/ZDL">ZDL</a> to make running the game easy.</p>
+            <p>Mac users can use the built-in launcher if they have more than one IWAD.</p>
+            <p>Otherwise, run <code>gzdoom -file Sonic-LockandLoad-vX.X.X.pk3</code> on the command line.</p>
             <p>If the above confused you, then all you need to do is open Sonic: Lock & Load's PK3 data file with the GZDoom application.</p>
             <h2>And that's it!</h2>
             <p>You're now playing Sonic: Lock & Load. Have fun with it, and don't forget to configure the options in case you want to!</p>
