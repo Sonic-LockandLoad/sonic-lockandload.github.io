@@ -43,96 +43,161 @@
                 <h2>Chaos (1.x)</h2>
 
                 <h3>Version 1.4</h3>
-                <p align="center">"Horizons"</p>
+                <p align="center">“Horizons”</p>
                 <p style="color:red;text-align:center;">Releasing in late 2023</p>
-                <p>Sonic: Lock &amp; Load v1.4 "Horizons" is a major update, bringing new levels, new techniques, refinements to the changes made in 1.3.x and major changes to the gameplay and Sonic: Lock &amp; Load's fundamentals.</p>
-                <p>How many times have I said "welcome to the next level" anyway?</p>
+                <p>Sonic: Lock &amp; Load v1.4 “Horizons” is a major update, bringing
+                    new levels, new techniques, refinements to the changes made in 1.3.x and
+                    major changes to the gameplay and Sonic: Lock &amp; Load’s
+                    fundamentals.</p>
+                <p>How many times have I said “welcome to the next level” anyway?</p>
                 <p>Really? Only three? Funny, seemed like more.</p>
-                <p>Bear in mind this is not an extensive list. I suck at this.</p>
-                <h4>What's new?</h4>
+                <p><strong>This probably isn’t an extensive list,</strong> since
+                    Horizons has been through so many changes that I’ve lost track of it
+                    all. Makes the jump from Dark (v0.9) to Chaos (v1.0) look like a joke
+                    and a half.</p>
+                <h3 id="levels">Levels</h3>
                 <ul>
-                    <li>A lot.</li>
-                    <li>I'm serious. <strong>A lot.</strong></li>
-                    <li>Seriously, A LOT.</li>
-                    <li>I made <em>three demos</em>, and I'm <strong>still</strong> adding stuff after the so-called 'Final Demo'!</li>
-                    <li>This is not an extensive list because there's legitimately SO MANY CHANGES that I've lost track. This makes the jump from v0.9 to v1.0 feel like a fricking joke.</li>
-                    <li>And now there's a god damn Final Final Demo. What is wrong with me?</li>
-                </ul>
-                <h4>Levels</h4>
-                <ul>
-                    <li>Sunset Gardens (replacing Green Hill)</li>
+                    <li>Sunset Gardens, replacing v1.3’s Green Hill</li>
                     <li>Marble Madness</li>
-                    <li>Unnamed third level</li>
-                    <li>Unnamed fourth level which I'll probably make in v1.4.1</li>
-                    <li>Hire This Zone, a bonus level</li>
-                    <li>Cyber Space Arena, a non-wave-based endless survival mode.</li>
+                    <li>Currently unnamed water-themed level</li>
+                    <li>Hire This Zone, a sandbox playground for Sonic only featuring a
+                        Super Sonic boss fight.</li>
+                    <li>Cyber Space Arena, an endless survival mode that is <em>not</em>
+                        wave based, not even slightly. It’s more “see how long you can last” and
+                        not “see how far you can get”.</li>
                 </ul>
-                <h4>Gameplay</h4>
+                <h3 id="gameplay">Gameplay</h3>
                 <ul>
-                    <li>The <kbd>Offhand</kbd> command has been split into <kbd>Offhand Attack</kbd> and <kbd>Offhand Ability</kbd>. Offhand Attacks are used for attacks (obviously) and Offhand Abilities are used for movement abilities.</li>
-                    <li>Movement changes. Pressing no movement keys mid-air will preserve your momentum.</li>
-                    <li>Campaign bosses have been removed entirely, though the secret bosses in Station Square are still there.</li>
-                    <li>Added a low health warning sound and a low energy (when in Super/Dark/Hyper form) warning sound.</li>
-                    <li>You now always move at the recommended speed, disregarding the <code>cl_run</code> console variable.</li>
-                    <li>Nerfed double jump power.</li>
-                    <li>The player will now actually drop rings upon taking damage which can be picked back up.. These rings will disappear after a while.</li>
-                    <li>All characters now have a slam attack that can be triggered by pressing <kbd>Crouch</kbd> mid-air. Classic Sonic will bounce instead.</li>
-                    <li>Crouching while moving will now trigger a crouch slide.</li>
+                    <li>The <kbd>Offhand</kbd> command has been split into<kbd>Offhand
+                            Attack</kbd> and<kbd>Offhand Ability</kbd>.</li>
                 </ul>
-                <h4>Character-specific</h4>
-                <h5>Sonic</h5>
+                <p>Offhand Attacks are… well, offhand attacks, and Offhand Abilities are
+                    usually movement options that don’t deal damage.</p>
                 <ul>
-                    <li>Added the Homing Attack and Homing Snap, techniques that allows Sonic to dash towards a target at rapid speed.</li>
-                    <ul>
-                        <li>Homing Attack will make Sonic kick immediately after dashing and attacking the enemy automatically.</li>
-                        <li>Homing Snap will cause Sonic to be suspended mid-air briefly after the dash, and you can follow up with any attack. Most likely going to be removed in v1.4.1, since the Homing Attack is better at this.</li>
-                    </ul>
-                    <li>Added the Quick Step, which allows Sonic to dodge any incoming attacks. He'll be invincible for the duration of the move. This can be cancelled into a jump or crouch slide.</li>
-                    <li>Reworked melee combat. Sonic can now perform sword combos with Caliburn if the player repeatedly presses <kbd>Fire</kbd>.</li>
-                    <li>Brought back the Soul Surge, now activated by performing the Homing Snap with Caliburn and attacking.</li>
-                    <li>The Accelerated Pistol now uses a burst fire instead of being fully automatic, and uses a bit more Chaos Energy.</li>
-                    <li>Greatly nerfed Wall Jump.</li>
-                    <li>Force Shot can now be done twice in quick succession.</li>
-                    <li>Eclipse Blaster Mk. V now fires in a series of short bursts with extended end lag, to incentivise quickswapping.</li>
-                    <li>Nerfed Hyper Sonic's speed to be the same as Super Sonic. This also applies to Classic Sonic.</li>
-                    <li>Nerfed Boost, Sonic can no longer hold it in the air unless Super and Hyper, and speed is nerfed so you must now build up speed to Boost Jump effectively.</li>
+                    <li>Movement changes; pressing no movement keys mid-air will preserve
+                        your horizontal momentum, but pressing movement keys will still have an
+                        effect on mid-air movement.</li>
+                    <li>When low on Rings (below 20) you’ll start to hear a low health
+                        sound.</li>
+                    <li>You’ll also start hearing a low energy sound if you’re about to lose
+                        your Super, Dark or Hyper Form due to having a low amount of Chaos
+                        Energy.</li>
+                    <li>You’ll now always run at a high speed, irregardless of the
+                        <code>cl_run</code> CVAR.
+                    </li>
+                    <li>When double jumping, the second jump will now have less height.</li>
+                    <li>Upon taking damage, your character will drop rings that can be
+                        picked back up, and will disappear after a short while.</li>
+                    <li>Every character can now perform the Slam Attack, not just Sonic. You
+                        can also use it at any time, independent of your weapon.</li>
+                    <li>When on the ground and moving, you’re able to crouch slide by
+                        holding down<kbd>Crouch</kbd>. Crouch sliding will preserve more of your
+                        momentum than just moving, and can be used to gain and maintain high
+                        ground speeds.</li>
                 </ul>
-                <h5>Amy</h5>
+                <h3 id="characters">Characters</h3>
+                <h4 id="sonic">Sonic</h4>
                 <ul>
-                    <li>Amy is now as fast as everyone else, and no longer takes increased damage.</li>
-                    <li>Added the ability to slide.</li>
-                    <li>Amy can now use the Piko Piko Hammer to parry incoming attacks, which allows her to reflect projectiles, at the cost of her Chaos Energy.</li>
-                    <li>Greatly changed how the Piko Piko Hammer works, requiring the right timing for attacking and Hammer Jumping, and removing Hammer Gliding.</li>
+                    <li>Sonic’s Offhand Attack is now the Homing Attack. The Homing Attack
+                        can be performed whenever Sonic’s looking at an enemy and the Homing
+                        Reticle is displayed in the middle of the screen and will cause Sonic to
+                        teleport to the enemy and deliver a swift kick.</li>
                 </ul>
-                <h5>Classic Sonic</h5>
+                <p>If Sonic’s too close to or too far from an enemy (the Homing Reticle
+                    doesn’t appear) Sonic will just kick instead.</p>
                 <ul>
-                    <li>Added Spin Attack, Insta-Shield and Drop Dash.</li>
-                    <li>Spin Dash mechanics have been reworked. It's now activated with simply <kbd>Fire</kbd> instead of <kbd>Crouch</kbd>+<kbd>Fire</kbd>.</li>
-                    <li>Classic Sonic can no longer punch.</li>
-                    <li>Super/Hyper Sonic can now hover.</li>
-                    <li>Drift no longer generates Chaos Energy mid-air.</li>
-                    <li>Sonic Thok can no longer be aimed left, right or backwards.</li>
-                    <li>Sonic Thok can now be activated by pressing <kbd>Jump</kbd> mid-air, like in SRB2.</li>
-                    <li>Added the ability to heal on the spot, up to 150 Rings.</li>
+                    <li>Sonic’s Offhand Ability is the Quick Step, which is an unlimited
+                        dash ability that can be used to evade enemy attacks or get closer to an
+                        enemy. It can be cancelled into a jump or crouch slide for extra
+                        mobility.</li>
+                    <li>Caliburn has been massively tweaked, and Sonic can now perform sword
+                        combos by repeatedly pressing<kbd>Fire</kbd>.</li>
+                    <li>Caliburn can now also parry close-up attacks if Sonic swings it
+                        right before he gets attacked.</li>
+                    <li>Boost can no longer be held down if Sonic’s using it mid-air, unless
+                        he’s in his Super or Hyper Form.</li>
+                    <li>Accelerated Pistol now uses a single-shot spammable burst fire.</li>
+                    <li>Recoil Burst must now be charged for at least a little bit.</li>
+                    <li>Wall Jump now works a lot more like ULTRAKILL’s, where it’s not
+                        nearly as overpowered and Sonic will no longer look behind him after
+                        performing the move.</li>
+                    <li>Rapid Shotty has been replaced by the Kinetic Shotty, which has a
+                        primary fire that scales its amount of pellets with Sonic’s velocity,
+                        and a secondary fire that’s a momentum-inheriting grenade.</li>
+                    <li>Shuriken Crossbow now has a better sound when the shuriken hits its
+                        target.</li>
+                    <li>Eclipse Blaster Mk. V now fires in a series of short bursts. This
+                        might be reverted at some point.</li>
+                    <li>Rocket Rioter’s rockets can now be Homing Attacked to turn them into
+                        homing rockets with more damage.</li>
+                    <li>Hyper Sonic’s speed is now equivalent to Super Sonic’s.</li>
                 </ul>
-                <h5>Shadow</h5>
+                <h4 id="amy">Amy</h4>
                 <ul>
-                    <li>Chaos Spear can now be used at any time, as Shadow's Offhand Attack.</li>
-                    <li>The Dual Assimilator is now more powerful and a lot more risky to use in a small space.</li>
-                    <li>Shadow will be able to Chaos Snap thrice if holding the Chaos Emerald.</li>
-                    <li>Shadow is now invincible when performing the Chaos Snap.</li>
-                    <li>Added the Sub-Machine Gun, as Shadow's starter weapon.</li>
+                    <li>Amy’s movement speed and jump height are now the same as everyone
+                        else’s.</li>
+                    <li>She also no longer takes increased damage from attacks.</li>
+                    <li>Amy’s Offhand Ability is the Slide Dash, which can slide over gaps
+                        and can be jumped out of.</li>
+                    <li>Piko Piko Hammer now requires a bit of timing for the attack or
+                        Hammer Jump to connect, and Amy can now use the hammer to parry incoming
+                        attacks in exchange for Chaos Energy.</li>
+                    <li>Piko Piko Hammer can no longer be used for gliding.</li>
+                    <li>Added the Railshot Cannon, a railgun with some knockback, like
+                        Sonic’s Recoil Burst.</li>
                 </ul>
-                <h4>Miscellaneous</h4>
+                <h4 id="classic-sonic">Classic Sonic</h4>
                 <ul>
-                    <li>Title theme is now Un-gravitify.</li>
-                    <li>Updated secret bosses.</li>
-                    <li>Title screen graphics now have a short delay before appearing, so that it loads properly on Linux.</li>
-                    <li>Added Reserved Mode, a mode that nerfs player movement to fit regular DOOM levels better.</li>
-                    <li>A Discord App ID has been added. Set <code>i_discordrpc</code> to <code>true</code> for it to work.</li>
-                    <li>If <code>DOOM2.WAD</code> was found in your GZDoom folder, it will be loaded automatically.</li>
-                    <li>The "Hell on Earth" chapter (as well as all other chapters) will now be hidden from the main menu. You can still access these levels with the <code>idclev</code> cheat or the <code>map</code> console command.</li>
-                    <li>Score is now counted and given a rank at the end of a level.</li>
+                    <li>Classic Sonic now has access to the Spin Attack, Double Spin Attack
+                        (Insta-Shield), and Drop Dash.</li>
+                    <li>Spin Dash is now just<kbd>Fire</kbd> – you don’t need to crouch
+                        anymore.</li>
+                    <li>Sonic Thok has been moved to Offhand Ability, and can now be
+                        activated with a double jump input, and Sonic can no longer aim it left,
+                        right or backwards.</li>
+                    <li>Drift has been heavily nerfed, and is nowhere near as effective
+                        mid-air.</li>
+                    <li>Classic Sonic can now regenerate up to 150 Rings on the spot, by
+                        crouching and holding<kbd>Alt-Fire</kbd>. He takes extra damage while
+                        doing so, though.</li>
+                </ul>
+                <h4 id="shadow">Shadow</h4>
+                <ul>
+                    <li>Shadow has been made a lot more like Sonic – he can perform a lot of
+                        the moves that Sonic can now.</li>
+                    <li>Chaos Spear can now be used at any time, as Shadow’s Offhand
+                        Attack.</li>
+                    <li>Chaos Snap has been moved to Offhand Ability.</li>
+                    <li>Holding the Chaos Emerald will give Shadow a third Chaos Snap.</li>
+                    <li>Shadow can now perform the Boost with the High Shovel, the same way
+                        Sonic can with Caliburn. It has a faster startup, uses less Chaos
+                        Energy, can be held in mid-air and will be affected by gravity.</li>
+                    <li>Added the Sub-Machine Gun, an automatic pistol that serves as
+                        Shadow’s starting weapon.</li>
+                </ul>
+                <h3 id="miscellaneous">Miscellaneous</h3>
+                <ul>
+                    <li>The title screen theme is now Un-Gravitify from Sonic Riders: Zero
+                        Gravity.</li>
+                    <li>Secret bosses have been made much tougher, especially the Fricking
+                        Cyberdemon, which is a lot more aggressive, and is now fought across all
+                        of Station Square instead of a small enclosed arena.</li>
+                    <li>Upon completing a level, your time and score are calculated, and
+                        you’re given a rank based on how well you met the target time and
+                        score.</li>
+                    <li>Title screen graphics now have a small delay before appearing, to
+                        fix problems with it on Linux.</li>
+                    <li>Added Reserved Mode, which brings player movements speed down to a
+                        more reasonable level. Intended for use with usual DOOM levels, and map
+                        packs that weren’t designed for Sonic: Lock &amp; Load.</li>
+                    <li>A Discord App ID has been added for Rich Presence, and can be used
+                        by setting the <code>i_discordrpc</code> CVAR to <code>true</code>.</li>
+                    <li>DOOM 2’s IWAD will now automatically be loaded if it’s detected by
+                        GZDoom.</li>
+                    <li>The “Hell on Earth” chapter (standard DOOM 2 levels) have been
+                        hidden from the episode selection menu. Which kind of defeats the
+                        purpose of Reserved Mode, but whatever. You can still access DOOM 2 maps
+                        with <code>idclev</code> or <code>map</code>.</li>
                 </ul>
 
                 <h3><a href="https://github.com/Sonic-LockandLoad/Sonic-LockandLoad/releases/tag/v1.3.3">Version 1.3.3</a></h3>
