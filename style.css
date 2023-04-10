@@ -44,7 +44,8 @@ kbd {
     margin: 1px;
 }
 gpd {
-    font-family: "Source Code Pro", monospace;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 600;
     font-size: 90%;
     border-radius: 50px;
     padding: 0px 6px;
@@ -177,9 +178,9 @@ gpd {
         position: fixed; 
     }
 }
-``
+
 @media only screen and (max-width: 435px) {
-    #logo { width: 20vw; }
+    #logo { width: 90%; }
 }
 
 /* Firefox scroll bar */
