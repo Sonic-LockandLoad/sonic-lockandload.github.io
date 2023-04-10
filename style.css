@@ -43,6 +43,17 @@ kbd {
     box-shadow: 0 2px 0 0 #020202;
     margin: 1px;
 }
+gpd {
+    font-family: "Source Code Pro", monospace;
+    font-size: 90%;
+    border-radius: 50px;
+    padding: 0px 6px;
+    color: white;
+    border: 2px solid #020202;
+    background-color: #202020;
+    box-shadow: 0 2px 0 0 #020202;
+    margin: 1px;
+}
 
 #content {
     margin: auto;
