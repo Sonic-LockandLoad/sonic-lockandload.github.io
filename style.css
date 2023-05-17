@@ -30,6 +30,8 @@ a:active { color: #7d38a5; }
 
 li {
     line-height: 1.8;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 kbd {
