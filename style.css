@@ -30,8 +30,8 @@ a:active { color: #7d38a5; }
 
 li {
     line-height: 1.8;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-top: 9px;
+    padding-bottom: 9px;
 }
 
 kbd {
@@ -164,7 +164,7 @@ gpd {
 
 #doox {
     position: absolute;
-    top: 1370;
+    top: 1470;
 }
 
 #redquoteblock {
@@ -212,6 +212,15 @@ gpd {
 *::-webkit-scrollbar-thumb:hover  { background-color: #6A6FD4; }
 *::-webkit-scrollbar-thumb:active { background-color: #363B8E; }
 
+/* Horizontal rule */
+
+hr {
+    color: #00000000;
+    background-color: #ffffff9c;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+
 /* Light mode */
 @media (prefers-color-scheme: light) {
     body {
@@ -233,4 +242,7 @@ gpd {
     a        { color: #222266; }
     a:hover  { color: #444466; }
     a:active { color: #6666FF; }
+    hr {
+        background-color: #0000009c;
+    }
 }
