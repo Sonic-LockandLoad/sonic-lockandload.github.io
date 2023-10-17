@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta property="type" content="website">
+		<meta property="url" content="https://sonic-lockandload.github.io">
+		<meta property="title" content="Sonic: Lock &amp; Load - Mac Instructions">
+        <meta property="author" content="Arsalan Kazmi">
+		<meta property="description" content="Instructions on how to install and play the game on macOS.">
+        <meta property="image" content="banner.png">
+        <meta property="image:type" content="image/png">
+        <meta property="image:width" content="730">
+        <meta property="image:height" content="512">
+        <script src="https://kit.fontawesome.com/56b6b2df41.js" crossorigin="anonymous"></script>
+        <title>Sonic: Lock &amp; Load » Installation</title>
+    </head>
+    <body>
+        <div id="header">
+            <a href="index.html"><img src="Sonic-LockandLoadLogo.png" id="logo"/></a>
+            <hr id="separator">
+        </div>
+        <div id="content">
+            <a href="instructions.html" style="position:absolute;">&lang; Back to Instructions</a>
+            <h1>Installing on macOS</h1>
+            <h2>Requirements</h2>
+            <ul>
+                <li>macOS 11 or later</li>
+                <li>The latest GZDoom release (you can get GZDoom from <a href="https://zdoom.org/downloads">zdoom.org</a>)</li>
+                <li>DOOM II: Hell on Earth's <code>doom2.wad</code> (you can get DOOM II from <a href="https://store.steampowered.com/app/2300/DOOM_II/">Steam</a> or <a href="https://www.gog.com/en/game/doom_ii">GOG</a>)</li>
+                <li>Freedoom: Phase 2's <code>freedoom2.wad</code> if you don't want to use DOOM II</li>
+            </ul>
+            <h2>Setting up GZDoom</h2>
+            <p>Open up GZDoom's DMG file and drag and drop the GZDoom application to your Applications folder. Then eject the DMG.</p>
+            <p>Take your <code>DOOM2.WAD</code> file and put it in your <code>/Users/&lt;username&gt;/Library/Application Support/GZDoom/</code> folder.</p>
+            <p>(I strangely remember being able to place it inside <code>/Users/&lt;username&gt;/Documents/GZDoom/</code>, though)</p>
+            <h2>Getting a copy of the game</h2>
+            <p>If you already know how to run GZDoom mods, the process is exactly the same.</p>
+            <p>Simply grab a PK3 from <a href="https://github.com/Sonic-LockandLoad/Sonic-LockandLoad/releases">GitHub releases</a> or <code>git clone</code> the Sonic: Lock & Load repository for the latest development version.</p>
+            <p id="greenquoteblock"><strong>Note:</strong> If you want to play the v1.4 Final Final Demo, simply download it from the front page and use its <code>Sonic-LockandLoad-v1.4-demo.pk3</code>.</p>
+            <h2>Running the game</h2>
+            <p>Open GZDoom in your Launchpad or from your Applications folder.</p>
+            <p>You'll see a part that says "command-line arguments" or something similar.</p>
+            <p>Type in <code>-file path/to/Sonic-LockandLoad-vX.X.X.pk3</code>, where <code>path/to/Sonic-LockandLoad-vX.X.X.pk3</code> is the path to the PK3 you downloaded or repository folder you cloned.</p>
+            <h2>And that's it!</h2>
+            <p>You're now playing Sonic: Lock & Load. Have fun with it, and don't forget to configure the options in case you want to!</p>
+            <p>If you have any feedback, <a href="https://github.com/sonic-lockandload/sonic-lockandload/issues/new/choose">open an issue on Sonic: Lock & Load's GitHub</a>.</p>
+        </div>
+    </body>
+</html>

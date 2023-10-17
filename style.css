@@ -130,23 +130,25 @@ gpd {
 #box-link {
     color: white;
     text-decoration: none;
+    text-align: center;
+    font-size: 115%;
     line-height: 1.3;
-}
-#box-link div {
+    display: block;
     background-color: #7550b9;
-    padding: 2px 25px;
-    margin: 20px;
+    padding: 20px 20px;
+    margin: 10px;
     box-shadow: 5px 5px 0px 0px #0000006b;
     transition: .2s;
 }
-#box-link div:hover {
+#box-link:hover {
     background-color: #886ace;
     box-shadow: 7px 7px 0px 0px #00000091;
 }
-#box-link div:active {
+#box-link:active {
     background-color: #43339b;
     box-shadow: 0px 0px 0px 0px #000000;
 }
+
 .releases {
     max-width: 700px;
     margin: auto;
