@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta property="type" content="website">
+		<meta property="url" content="https://sonic-lockandload.github.io">
+		<meta property="title" content="Sonic: Lock &amp; Load - Windows Instructions">
+        <meta property="author" content="Arsalan Kazmi">
+		<meta property="description" content="Instructions on how to install and play the game on Windows.">
+        <meta property="image" content="banner.png">
+        <meta property="image:type" content="image/png">
+        <meta property="image:width" content="730">
+        <meta property="image:height" content="512">
+        <script src="https://kit.fontawesome.com/56b6b2df41.js" crossorigin="anonymous"></script>
+        <title>Sonic: Lock &amp; Load » Installation</title>
+    </head>
+    <body>
+        <div id="header">
+            <a href="index.html"><img src="Sonic-LockandLoadLogo.png" id="logo"/></a>
+            <hr id="separator">
+        </div>
+        <div id="content">
+            <a href="instructions.html" style="position:absolute;">&lang; Back to Instructions</a>
+            <h1>Installing on Android</h1>
+            <h2>Requirements</h2>
+            <ul>
+                <li>Android 4.1 or later</li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.opentouchgaming.deltatouch">Delta Touch</a> ($2.49)</li>
+                <li>DOOM II: Hell on Earth's <code>doom2.wad</code> (you can get DOOM II from <a href="https://store.steampowered.com/app/2300/DOOM_II/">Steam</a> or <a href="https://www.gog.com/en/game/doom_ii">GOG</a>)</li>
+                <li>Freedoom: Phase 2's <code>freedoom2.wad</code> if you don't want to use DOOM II</li>
+            </ul>
+            <h2>Setting up Delta Touch</h2>
+            <p>Upon starting up Delta Touch, complete the first time setup.</p>
+            <p>When choosing a directory to store the app's data, go with <code>Internal Storage/OpenTouch/Delta/</code>.</p>
+            <p>If you want to use DOOM 2, transfer the IWAD to your device from a computer. If you'd rather use Freedoom: Phase 2, select <code>freedoom2.wad</code> in Delta Touch's menu. It'll download it for you.</p>
+            <p>Afterwards, touch the arrow on the left side of the screen and hit the <i class="fa-solid fa-gear"></i> (settings) icon next to the GZDoom icon.</p>
+            <p>Set the engine to "DEV", which as of October 2023 is GZDoom g4.11pre. Yeah, you have to use a pre-release version, but it's so much better than not having a version to use at all.</p>
+            <h2>Getting a copy of the game</h2>
+            <p>If you already know how to run GZDoom mods in Delta Touch, the process is exactly the same.</p>
+            <p>Simply grab a PK3 from <a href="https://github.com/Sonic-LockandLoad/Sonic-LockandLoad/releases">GitHub releases</a>. You can <code>git clone</code> the Sonic: Lock & Load repository if you want, but that's much harder on Android without access to a computer.</p>
+            <p>The PK3 should be put in <code>Internal Storage/OpenTouch/Delta/mods/</code>.</p>
+            <p id="greenquoteblock"><strong>Note:</strong> If you want to play the v1.4 Final Final Demo, simply download it from the front page and use its <code>Sonic-LockandLoad-v1.4-demo.pk3</code>.</p>
+            <h2>Running the game</h2>
+            <p>Open up Delta Touch. Make sure doom2.wad or freedoom2.wad is selected, then touch the MOD icon and touch the <i class="fa-solid fa-list"></i> (list) icon, then choose "Sonic-LockandLoad-vX.X.X.pk3" from the list.</p>
+            <p>Then go back to the main menu and hit the <i class="fa-solid fa-circle-play"></i> (play) icon to start the game.</p>
+            <h2>And that's it!</h2>
+            <p>You're now playing Sonic: Lock & Load. Have fun with it, and don't forget to configure the options in case you want to! Also, hook up a controller. Touch controls suck for a game like this.</p>
+            <p>If you have any feedback, <a href="https://github.com/sonic-lockandload/sonic-lockandload/issues/new/choose">open an issue on Sonic: Lock & Load's GitHub</a>.</p>
+        </div>
+    </body>
+</html>
