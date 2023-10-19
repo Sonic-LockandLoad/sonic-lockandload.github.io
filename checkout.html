@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <link href="checkout.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+        <!-- HTML Meta Tags -->
+        <title>Sonic: Lock & Load » DLC</title>
+        <meta name="description" content="Download some DLC for Sonic: Lock & Load.">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://sonic-lockandload.github.io/dlc.html">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Sonic: Lock & Load » DLC">
+        <meta property="og:description" content="Download some DLC for Sonic: Lock & Load.">
+        <meta property="og:image" content="https://sonic-lockandload.github.io/TITLEPIC.png">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="sonic-lockandload.github.io">
+        <meta property="twitter:url" content="https://sonic-lockandload.github.io/dlc.html">
+        <meta name="twitter:title" content="Sonic: Lock & Load » DLC">
+        <meta name="twitter:description" content="Download some DLC for Sonic: Lock & Load.">
+        <meta name="twitter:image" content="https://sonic-lockandload.github.io/TITLEPIC.png">
+
+        <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+        
+        <script src="https://kit.fontawesome.com/56b6b2df41.js" crossorigin="anonymous"></script>
+        <title>Sonic: Lock &amp; Load » DLC</title>
+    </head>
+    <body>
+        <div id="header">
+            <a href="index.html"><img src="Sonic-LockandLoadLogo.png" id="logo"/></a>
+            <hr id="separator">
+        </div>
+        <div id="content">
+            <a href="dlc.html" style="position:absolute;">&lang; Back to DLC page</a>
+            <h1>Checkout</h1>
+            <div id="receipt">
+                <h4><strong><span id="name">Loading...</span></strong> &ndash; <span id="price"></span> Rings</h4>
+                <p>This content requires the base game <a href="index.html">Sonic: Lock & Load</a> to play.</p>
+                <p>Your total amounts to <strong><span id="total"></span> Rings.</strong></p>
+                <h4>Billing Information</h4>
+                <p>
+                    Name: Sonic the Hedgehog<br>
+                    Email: sonic@emeraldnotwork.com<br>
+                    Card Number: 1991 0623 1234 4321<br>
+                    Expiry Date: 06/24<br>
+                    CVV: 069<br>
+                    Address: 29th Chaos Street, Station Square, CTC, Mobius<br>
+                    Shipping Address: Tails' Laboratory, Mystic Ruins, Mobius<br>
+                    Special Instructions: Just leave it on the ground, Sonic will come pick it up himself.
+                </p>
+                <p>You will be billed on your Emerald Notwork account. This transaction is non-refundable.</p>
+                <button type="button" onclick="downloadFile()">Purchase & Download</button>
+            </div>
+        </div>
+        <script>
+            let dlcEntry = null;
+
+            async function fetchData() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const dlcName = urlParams.get('name');
+
+                try {
+                    const response = await fetch('dlc-items.json');
+                    const dlcs = await response.json();
+
+                    for (const dlc of dlcs) {
+                        if (dlc.name === dlcName) {
+                            dlcEntry = dlc;
+                            break;
+                        }
+                    }
+
+                    if (!dlcName || !dlcEntry) {
+                        window.location.href = 'dlc.html';
+                    } else {
+                        const name = document.getElementById('name');
+                        const price = document.getElementById('price');
+                        const total = document.getElementById('total');
+                        name.innerHTML = dlcName;
+                        price.innerHTML = dlcEntry.price;
+                        total.innerHTML = dlcEntry.price;
+                    }
+                }
+                catch (error) {
+                    console.error('Error:', error);
+                    window.location.href = 'dlc.html';
+                }
+            }
+
+            function downloadFile() {
+                window.location.href = "dlc/" + dlcEntry.file;
+            }
+
+            fetchData();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+#receipt {
+    line-height: 1.4;
+    background-color: #00000022;
+    border-radius: 10px;
+    width: 70%;
+    margin: 15px auto;
+    padding: 20px 30px;
+}
+#receipt h4 {
+    font-size: 125%;
+    line-height: 1;
+}
+#receipt button {
+    width: 100%;
+}
