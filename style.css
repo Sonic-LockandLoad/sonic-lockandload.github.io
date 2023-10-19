@@ -189,8 +189,7 @@ gpd {
 }
 
 #doox {
-    position: absolute;
-    top: 1580;
+    width: 150px;
 }
 
 #redquoteblock {
@@ -212,11 +211,6 @@ gpd {
     #links { text-align: center; }
     #box-links { display: block; }
     #box-links a { margin-bottom: 4px; }
-    #doox { 
-        top: 5px; 
-        left: 5px; 
-        position: fixed; 
-    }
 }
 
 @media only screen and (max-width: 435px) {
