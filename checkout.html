@@ -52,28 +52,28 @@
                     Shipping Address: Tails' Laboratory, Mystic Ruins, Mobius<br>
                     Special Instructions: Just leave it on the ground, Sonic will come pick it up himself.
                 </p>
-                <p>You will be billed on your Emerald Notwork account. This transaction is non-refundable.</p>
-                <button type="button" onclick="downloadFile()">Purchase & Download</button>
+                <p id="billing-info">You will be billed on your Emerald Notwork account. This transaction is non-refundable.</p>
+                <button type="button" id="purchase-button" onclick="downloadFile()">Purchase & Download</button>
             </div>
         </div>
         <script>
             let dlcEntry = null;
-
+        
             async function fetchData() {
                 const urlParams = new URLSearchParams(window.location.search);
                 const dlcName = urlParams.get('name');
-
+        
                 try {
                     const response = await fetch('dlc-items.json');
                     const dlcs = await response.json();
-
+        
                     for (const dlc of dlcs) {
                         if (dlc.name === dlcName) {
                             dlcEntry = dlc;
                             break;
                         }
                     }
-
+        
                     if (!dlcName || !dlcEntry) {
                         window.location.href = 'dlc.html';
                     } else {
@@ -83,6 +83,16 @@
                         name.innerHTML = dlcName;
                         price.innerHTML = dlcEntry.price;
                         total.innerHTML = dlcEntry.price;
+        
+                        const purchased = localStorage.getItem(dlcName);
+        
+                        if (purchased) {
+                            const billingInfo = document.getElementById('billing-info');
+                            const purchaseButton = document.getElementById('purchase-button');
+                            
+                            billingInfo.innerHTML = 'You own this item.';
+                            purchaseButton.innerHTML = 'Download';
+                        }
                     }
                 }
                 catch (error) {
@@ -90,12 +100,17 @@
                     window.location.href = 'dlc.html';
                 }
             }
-
+        
             function downloadFile() {
+                // If the user hasn't purchased, set the local storage to indicate ownership
+                if (!localStorage.getItem(dlcEntry.name)) {
+                    localStorage.setItem(dlcEntry.name, 'true');
+                }
+                
                 window.location.href = "dlc/" + dlcEntry.file;
             }
-
+        
             fetchData();
-        </script>
+        </script>        
     </body>
 </html>
