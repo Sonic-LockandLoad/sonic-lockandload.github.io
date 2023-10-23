@@ -102,12 +102,12 @@
             }
         
             function downloadFile() {
-                // If the user hasn't purchased, set the local storage to indicate ownership
                 if (!localStorage.getItem(dlcEntry.name)) {
                     localStorage.setItem(dlcEntry.name, 'true');
                 }
                 
                 window.location.href = "dlc/" + dlcEntry.file;
+                location.reload();
             }
         
             fetchData();
