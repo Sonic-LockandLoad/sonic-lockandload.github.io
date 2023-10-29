@@ -107,7 +107,7 @@
                 }
                 
                 window.location.href = "dlc/" + dlcEntry.file;
-                location.reload();
+                setTimeout(location.reload.bind(location), 200);
             }
         
             fetchData();
