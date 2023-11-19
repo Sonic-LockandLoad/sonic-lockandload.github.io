@@ -43,19 +43,41 @@
             <ul>
                 <li>
                     <strong>Double Jump</strong> - <kbd>Jump</kbd> mid-air <hr>
-                    Sonic, Amy and Shadow can jump while they're already mid-air, 
-                    to extend their aerial movement and gain extra height and distance. Classic Sonic instead has the
-                    <a href="#sonicthok">Sonic Thok</a>, which lets him dash around the arena.
+                    Sonic, Amy and Shadow can jump while they're already
+                    mid-air, to extend their aerial movement and gain extra
+                    height and distance.<br>
+                    Classic Sonic instead has the <a href="#sonicthok">Sonic
+                    Thok</a>, which lets him dash around the arena.
                 </li>
                 <li>
-                    <strong>Slam Attack</strong> - <kbd>Crouch</kbd> mid-air <hr> Sonic, Amy and Shadow can thrust themselves downward and slam
-                    into the ground. Damages and launches enemies in a low radius. Jump immediately after a Slam Attack to jump higher. Classic Sonic
-                    instead has the <a href="#bounceattack">Bounce Attack</a>, which doesn't have the AoE attack or launching.
+                    <strong>Wall Jump</strong> - <kbd>Jump</kbd> mid-air, while next to a wall <hr> 
+                    Sonic, Amy and Shadow can perform a Wall Jump, which makes
+                    the character quickly grip onto a wall and immediately push
+                    themselves off of it, no matter what direction they're
+                    facing, even if the wall is behind them.<br>
+                    This is primarily used for mobility, and some obstacles
+                    require its repeated use to scale opposing walls.<br>
+                    Classic Sonic instead has the <a href="#walldash">Wall
+                    Dash</a>, which lets him rev a Spin Dash on a wall and 
+                    launch himself upwards.
                 </li>
                 <li>
-                    <strong>Crouch Slide</strong> - <kbd>Crouch</kbd> while moving <hr> Crouch Slide allows the user to glide across the ground,
-                    boosting their speed. Jumping during a Crouch Slide increases your jump distance based on your velocity. It's excellent for
-                    maintaining momentum and achieving high ground speeds. Sonic, Amy, and Classic Sonic can seamlessly transition from certain
+                    <strong>Slam Attack</strong> - <kbd>Crouch</kbd> mid-air <hr>
+                    Sonic, Amy and Shadow can thrust themselves downward and
+                    slam into the ground. Damages and launches enemies in a low
+                    radius. Jump immediately after a Slam Attack to jump higher. <br>
+                    Classic Sonic instead has the <a href="#bounceattack">Bounce
+                    Attack</a>, which doesn't have the AoE attack or launching.
+                </li>
+                <li>
+                    <strong>Crouch Slide</strong> - <kbd>Crouch</kbd> while moving <hr> 
+                    Crouch Slide allows the user to glide across the ground,
+                    boosting their speed.<br>
+                    Jumping during a Crouch Slide increases your jump distance
+                    based on your velocity.<br>
+                    It's excellent for maintaining momentum and achieving high
+                    ground speeds.<br>
+                    Each character can seamlessly transition from certain
                     movements into a Crouch Slide.
                 </li>
             </ul>
@@ -81,12 +103,6 @@
                     If a Double Jump wasn't used, you can press <kbd>Jump</kbd> as soon as Sonic rebounds to rebound higher, 
                     which is extremely useful for mobility and positioning.<br>
                     Can activate attackable switches.
-                </li>
-                <li>
-                    <strong>Wall Jump</strong> - <kbd>Jump</kbd> mid-air, while next to a wall <hr> 
-                    Sonic can perform a Wall Jump, which makes him quickly grip onto a wall and immediately push himself off
-                    of it, no matter what direction he's facing, even if the wall is behind him.<br>
-                    This is primarily used for mobility, and some obstacles require its repeated use to scale opposing walls.
                 </li>
                 <li>
                     <strong>Quick Step</strong> - <kbd>Offhand Ability</kbd> <hr> 
@@ -246,7 +262,7 @@
                     <li><strong>Rush State</strong> - <kbd>Alt-Fire</kbd> + <kbd>Forward</kbd> unarmed <hr> Rush State will have Sonic rapidly move forwards and generate Chaos Energy. If Rush State is used in the air, it won't travel as far. Sonic also can't enter Rush State unless he's touching the ground. Does not deal damage.</li>
                     <li><strong>Spin Dash</strong> - Hold <kbd>Fire</kbd> to charge, then release <hr> <em>The</em> signature technique. Sonic can charge up a high-speed spin attack and send himself barrelling towards any enemy who ever looked at him funny. You can press <kbd>Jump</kbd> during a Spin Dash to Spin Dash Jump, and you can hold <kbd>Move Back</kbd> to slow down the Spin Dash. Can activate attackable switches.</li>
                     <li><strong>Drop Dash</strong> - Hold <kbd>Fire</kbd> mid-air until you hit the ground <hr> An instant Spin Dash charged in the air. It isn't able to travel as fast as the Spin Dash does, but otherwise it has the exact same properties as the Spin Dash.</li>
-                    <li><strong>Wall Dash</strong> - Hold <kbd>Fire</kbd> against a wall to charge, then release <hr> Sonic can rev up a wallbound Spin Dash and release it, sending himself flying up. This technique can be used to scale walls, and is a replacement for his Modern counterpart's Wall Jump.</li>
+                    <li id="walldash"><strong>Wall Dash</strong> - Hold <kbd>Fire</kbd> against a wall to charge, then release <hr> Sonic can rev up a wallbound Spin Dash and release it, sending himself flying up. This technique can be used to scale walls, and is a replacement for his Modern counterpart's Wall Jump.</li>
                 </ul>
                 <li><strong>Chaos Blaster</strong> - An attempt to recreate the Eclipse Blaster by Tails.<br>It's very ammo-efficient, but Tails had not been able to replicate its Ring-restoring feature.</li>
                 <ul>
@@ -269,28 +285,32 @@
 
             <img src=shadow.png id=character />
             <h3>Shadow the Hedgehog</h3>
-            <p>Shadow nearly controls exactly the same as Sonic, but where he differs are the abilities available to him - he can't Quick Step or Wall Jump, and his Homing Attack is a Homing Assault, which works and controls quite a bit differently.</p>
+            <p>Shadow nearly controls exactly the same as Sonic, but where he differs are the abilities available to him - he can't Quick Step, instead, he can use Chaos Snap, and his Homing Attack is called Homing Assault, which works and controls quite a bit differently.</p>
             <p>His Chaos Snap gives him the ability to quickly dash around the level, so he can reach places or skip certain platforming sections he normally wouldn't be able to.</p>
             <p>His weapons are the most powerful in the game, but they can't be comboed as well as Sonic's can; they're quite basic.</p>
             <p>Shadow's combat is a lot simpler than the rest of the cast, and doesn't have nearly as much depth as Sonic's combat, but he can typically get through most combat encounters easier than everyone else.</p>
             <h4>Skills</h4>
             <ul>
-                <li><strong>Punch</strong> - <kbd>Offhand Attack</kbd> when close to a target <hr>
+                <li>
+                    <strong>Punch</strong> - <kbd>Offhand Attack</kbd> when close to a target <hr>
                     Shadow can destroy most enemies with a single punch.<br>
                     If he's in his Super Form, his punches will cause an explosion.<br>
                     Can activate attackable switches.
                 </li>
-                <li><strong>Chaos Spear</strong> - <kbd>Offhand Attack</kbd> <hr>
+                <li>
+                    <strong>Chaos Spear</strong> - <kbd>Offhand Attack</kbd> <hr>
                     Shadow can fire a Chaos Spear from his hand if he isn't close up to an enemy.<br>
                     Can activate attackable switches.
                 </li>
-                <li><strong>Chaos Snap</strong> - <kbd>Offhand Ability</kbd> <hr>
+                <li>
+                    <strong>Chaos Snap</strong> - <kbd>Offhand Ability</kbd> <hr>
                     A variant of Chaos Control that lets Shadow teleport a short distance away.<br>
                     Can only be used twice mid-air, unless Shadow's holding the Chaos Emerald or is Super Shadow.<br>
                     If Shadow is holding the Chaos Emerald, he'll be able to use it thrice mid-air.<br>
                     Shadow is invincible during this technique.
                 </li>
-                <li><strong>Homing Assault</strong> - <kbd>Jump</kbd>* when Homing Reticle appears <hr>
+                <li>
+                    <strong>Homing Assault</strong> - <kbd>Jump</kbd>* when Homing Reticle appears <hr>
                     Shadow's variation on the Homing Attack.<br>
                     The Homing Assault will have Shadow rapidly dash towards his target and unleash a surge
                     of Chaos Energy, dealing significant damage to the target and additional damage to any 
