@@ -36,15 +36,6 @@
         "category": "Music"
     },
     {
-        "name": "Momentum Physics",
-        "file": "script-v1.4physics.wad",
-        "date": "2023-10-19",
-        "price": "40",
-        "compatibility": "v1.0–v1.3.3",
-        "description": "This DLC takes the same physics code from v1.4 'Horizons' and applies it to your older Sonic: Lock & Load version. You'll come to a stop faster on ground, you have a good amount of mid-air control and releasing all movement keys will preserve your current momentum. You'll also jump higher if playing with versions prior to v1.3.",
-        "category": "Gameplay"
-    },
-    {
         "name": "Modern Amy",
         "file": "sprite-modernamy.wad",
         "date": "2023-10-19",
