@@ -203,8 +203,8 @@ gpd {
 }
 
 #character {
-    width: 150px;
-    display: inline;
+    height: 350px;
+    display: block;
     float: right;
     padding-left: 20px;
 }
@@ -252,15 +252,6 @@ gpd {
 *::-webkit-scrollbar-thumb        { background-color: #858bff; }
 *::-webkit-scrollbar-thumb:hover  { background-color: #6A6FD4; }
 *::-webkit-scrollbar-thumb:active { background-color: #363B8E; }
-
-/* Horizontal rule */
-
-hr {
-    color: #00000000;
-    background-color: #ffffff9c;
-    margin-top: 6px;
-    margin-bottom: 10px;
-}
 
 /* Light mode */
 @media (prefers-color-scheme: light) {
