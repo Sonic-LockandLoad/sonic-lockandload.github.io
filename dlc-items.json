@@ -6,7 +6,7 @@
         "price": "89",
         "compatibility": "v1.3 and above",
         "category": "Maps",
-        "description": "Fancy a little nostalgic challenge? This DLC includes the old Green Hill from Sonic: Lock & Load v1.0-v1.2 as a separate episode for newer versions."
+        "description": "Fancy a little nostalgic challenge? This includes the old Green Hill from v1.0-v1.2 as a separate episode for newer versions. Just be aware that compatibility issues may arise, since v1.0 is a rather old and archaic version of the game, and its Green Hill level was not made with v1.4's features in mind."
     },
     {
         "name": "His World on Title Screen",
@@ -23,7 +23,7 @@
         "date": "2023-10-19",
         "price": "25",
         "compatibility": "v1.0 and above",
-        "description": "Feel the power of Sonic 4 Episode III with this Super Sonic theme! Replaces Classic Sonic's Super theme with the one from Sonic Origins' version of Sonic 3 & Knuckles.",
+        "description": "Feel the power of Sonic 4 Episode III with this Super Sonic theme! Replaces Classic Sonic's Super form theme with the one from the Sonic Origins version of Sonic 3 & Knuckles.",
         "category": "Music"
     },
     {
@@ -32,8 +32,17 @@
         "date": "2023-10-19",
         "price": "35",
         "compatibility": "v1.3 and above",
-        "description": "The title screen music will be replaced with I'm Here, and the title map will be Hire This Zone.",
+        "description": "The title screen music will be replaced with I'm Here, and the title map will be Hire This Zone. Best used with v1.4 since that version includes Hire This Zone, but v1.3 will work too.",
         "category": "Music"
+    },
+    {
+        "name": "DMC5 Style Ranks",
+        "file": "game-dmc5styleranks.wad",
+        "date": "2023-12-25",
+        "price": "65",
+        "compatibility": "v1.4 and above",
+        "description": "Changes the style ranks used in the Style System to the ones from Devil May Cry 5, complete with voice clips. There's no dynamic music system or anything, though. Sorry.",
+        "category": "Gameplay"
     },
     {
         "name": "Modern Amy",

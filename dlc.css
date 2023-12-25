@@ -1,8 +1,9 @@
 #box-link {
     text-align: left;
+    font-size: 18px;
 }
 #title {
-    font-size: 115%;
+    font-size: 125%;
 }
 #date {
     font-weight: normal;
