@@ -32,7 +32,7 @@ async function renderDlcItems() {
                 descriptionP.innerHTML = item.description;
 
                 const compatibilityP = document.createElement('p');
-                compatibilityP.textContent = `Compatible with ${item.compatibility}.`;
+                compatibilityP.textContent = `Compatible with Sonic: Lock & Load ${item.compatibility}.`;
 
                 divElement.appendChild(h4Element);
                 divElement.appendChild(dateP);

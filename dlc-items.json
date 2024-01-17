@@ -45,6 +45,15 @@
         "category": "Gameplay"
     },
     {
+        "name": "ULTRAKILL Style Ranks",
+        "file": "game-ultrakillstyleranks.wad",
+        "date": "2024-01-17",
+        "price": "55",
+        "compatibility": "v1.4.1 and above",
+        "description": "Changes the style ranks used in the Style System to the ones from ULTRAKILL.",
+        "category": "Gameplay"
+    },
+    {
         "name": "Modern Amy",
         "file": "sprite-modernamy.wad",
         "date": "2023-10-19",
