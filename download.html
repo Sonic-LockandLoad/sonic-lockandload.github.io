@@ -44,24 +44,15 @@
                 Want to play an older version? Check out the <a href="https://github.com/Sonic-LockandLoad/Sonic-LockandLoad/releases">releases page on GitHub</a>.
             </p>
             <a id="box-link" href="https://github.com/Sonic-LockandLoad/Sonic-LockandLoad/releases/download/v1.4.0/Sonic-LockandLoad-v1.4-Distrib.zip">
-                <h4 id="title">
-                    Sonic: Lock & Load, v1.4 "Horizons" Distrib Package
-                    <span class="fa-brands fa-windows"></span>
-                </h4>
-                <code>Sonic-LockandLoad-v1.4-Distrib.zip</code>
+                <h4 id="title">Sonic: Lock & Load, v1.4 "Horizons" Distrib Package</h4>
+                <code>Sonic-LockandLoad-v1.4-Distrib.zip - <span id="download-count-0">?</span> downloads</code>
                 <p>For Windows only. Includes a bundled GZDoom g4.11.0 which will only detect DOOM II or Freedoom: Phase 2.</p>
                 <p>This is the version you should get if you want to play on Windows with no hassle.</p>
                 <p>Unzip it to whatever directory, drop in DOOM2.WAD or freedoom2.wad, and run Sonic-LockandLoad.exe.</p>
             </a>
             <a id="box-link" href="https://github.com/Sonic-LockandLoad/Sonic-LockandLoad/releases/download/v1.4.0/Sonic-LockandLoad-v1.4.pk3">
-                <h4 id="title">
-                    Sonic: Lock & Load, v1.4 "Horizons" Standalone PK3
-                    <span class="fa-brands fa-windows"></span>
-                    <span class="fa-brands fa-apple"></span>
-                    <span class="fa-brands fa-linux"></span>
-                    <span class="fa-brands fa-android"></span>
-                </h4>
-                <code>Sonic-LockandLoad-v1.4.pk3</code>
+                <h4 id="title">Sonic: Lock & Load, v1.4 "Horizons" Standalone PK3</h4>
+                <code>Sonic-LockandLoad-v1.4.pk3 - <span id="download-count-1">?</span> downloads</code>
                 <p>For an existing GZDoom installation. Works on all GZDoom-supported platforms.</p>
                 <p>This is the version you should get if you have GZDoom already, or you're playing on macOS, Linux, Android or whatever else.</p>
                 <p>It's recommended you place the PK3 in a designated "DOOM Mods" folder and use the ZDL launcher. Android users have Delta Touch for managing mods.</p>
@@ -75,6 +66,11 @@
                     .then(data => {
                         const markdownContent = data.body;
                         renderMarkdownToHTML(markdownContent);
+                        for (let i = 0; i < data.assets.length; i++) {
+                            const asset = data.assets[i];
+                            const downloadCountElement = document.getElementById(`download-count-${i}`);
+                            downloadCountElement.textContent = asset.download_count;
+                        }
                     })
                     .catch(error => console.error('Error fetching release:', error));
                 }
