@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <link href="/style.css" rel="stylesheet">
+        <link href="/dlc.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta property="type" content="website">
+
+        <!-- HTML Meta Tags -->
+        <title>Sonic: Lock & Load » Download</title>
+        <meta name="description" content="Get Sonic: Lock & Load.">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://sonic-lockandload.github.io/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Sonic: Lock & Load » Download">
+        <meta property="og:description" content="Get Sonic: Lock & Load.">
+        <meta property="og:image" content="https://sonic-lockandload.github.io/TITLEPIC.png">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="sonic-lockandload.github.io">
+        <meta property="twitter:url" content="https://sonic-lockandload.github.io/">
+        <meta name="twitter:title" content="Sonic: Lock & Load » Download">
+        <meta name="twitter:description" content="Get Sonic: Lock & Load.">
+        <meta name="twitter:image" content="https://sonic-lockandload.github.io/TITLEPIC.png">
+
+        <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+        
+        <script src="https://kit.fontawesome.com/56b6b2df41.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <title>Sonic: Lock &amp; Load » Download</title>
+    </head>
+    <body>
+        <div id="header">
+            <a href="index.html"><img src="Sonic-LockandLoadLogo.png" id="logo"/></a>
+            <hr id="separator">
+        </div>
+        <div id="content">
+            <h1>Choose your download</h1>
+            <p>
+                The current version of Sonic: Lock & Load is <strong>v1.4 "Horizons"</strong>. <br>
+                Need help? Follow the <a href="/instructions.html">installation instructions</a>. <br>
+                Want to play an older version? Check out the <a href="https://github.com/Sonic-LockandLoad/Sonic-LockandLoad/releases">releases page on GitHub</a>.
+            </p>
+            <a id="box-link" href="https://github.com/Sonic-LockandLoad/Sonic-LockandLoad/releases/download/v1.4.0/Sonic-LockandLoad-v1.4-Distrib.zip">
+                <h4 id="title">
+                    Sonic: Lock & Load, v1.4 "Horizons" Distrib Package
+                    <span class="fa-brands fa-windows"></span>
+                </h4>
+                <code>Sonic-LockandLoad-v1.4-Distrib.zip</code>
+                <p>For Windows only. Includes a bundled GZDoom g4.11.0 which will only detect DOOM II or Freedoom: Phase 2.</p>
+                <p>This is the version you should get if you want to play on Windows with no hassle.</p>
+                <p>Unzip it to whatever directory, drop in DOOM2.WAD or freedoom2.wad, and run Sonic-LockandLoad.exe.</p>
+            </a>
+            <a id="box-link" href="https://github.com/Sonic-LockandLoad/Sonic-LockandLoad/releases/download/v1.4.0/Sonic-LockandLoad-v1.4.pk3">
+                <h4 id="title">
+                    Sonic: Lock & Load, v1.4 "Horizons" Standalone PK3
+                    <span class="fa-brands fa-windows"></span>
+                    <span class="fa-brands fa-apple"></span>
+                    <span class="fa-brands fa-linux"></span>
+                    <span class="fa-brands fa-android"></span>
+                </h4>
+                <code>Sonic-LockandLoad-v1.4.pk3</code>
+                <p>For an existing GZDoom installation. Works on all GZDoom-supported platforms.</p>
+                <p>This is the version you should get if you have GZDoom already, or you're playing on macOS, Linux, Android or whatever else.</p>
+                <p>It's recommended you place the PK3 in a designated "DOOM Mods" folder and use the ZDL launcher. Android users have Delta Touch for managing mods.</p>
+            </a>
+            <div id="release-content"></div>
+            <script>
+                const GITHUB_TOKEN = 'API_AUTH_TOKEN';
+                function fetchRelease(owner, repo, releaseId) {
+                    fetch(`https://api.github.com/repos/${owner}/${repo}/releases/tags/${releaseId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const markdownContent = data.body;
+                        renderMarkdownToHTML(markdownContent);
+                    })
+                    .catch(error => console.error('Error fetching release:', error));
+                }
+
+                function renderMarkdownToHTML(markdownContent) {
+                    const htmlContent = marked.parse(markdownContent).replaceAll("h1", "h2");
+                    console.log(htmlContent);
+                    document.getElementById('release-content').innerHTML = "<h1>Release Notes</h1>" + htmlContent;
+                }
+
+                fetchRelease('Sonic-LockandLoad', 'Sonic-LockandLoad', 'v1.4.0');
+            </script>
+        </div>
+    </body>
+</html>
