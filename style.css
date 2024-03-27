@@ -64,7 +64,7 @@ a:hover  { color: #ffa9d1; }
 a:active { color: #c24881; }
 
 li {
-    line-height: 1.8;
+    padding-bottom: 6px;
 }
 
 kbd {
