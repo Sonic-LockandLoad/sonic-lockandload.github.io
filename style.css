@@ -16,6 +16,38 @@ h1, h2, h3 {
     font-weight: 600;
 }
 
+table {
+    width: 100%;
+    font-size: 18px;
+    border-radius: 12px;
+    background-color: #0000001a;
+    padding: 10px 0;
+    tr {
+        margin: 25px;
+        td {
+            padding: 5px 10px;
+        }
+    }
+}
+
+#style-rank-img {
+    width: 48px;
+    text-align: center;
+    align-items: center;
+}
+
+#stylebonus-kill {
+    color: #00fa00;
+}
+
+#stylebonus-positional {
+    color: #ffee00;
+}
+
+#stylebonus-special {
+    color: #60cdff;
+}
+
 button { 
     font-family: 'Chakra Petch', sans-serif;
     font-size: 18px;
@@ -279,4 +311,16 @@ gpd {
         background-color: #0000009c;
     }
     #download-link { color: #454545; }
+    table {
+        background-color: #FFFFFF;
+    }
+    #stylebonus-kill {
+        color: #00ad00;
+    }
+    #stylebonus-positional {
+        color: #dacd24;
+    }
+    #stylebonus-special {
+        color: #2face6;
+    }
 }

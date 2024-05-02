@@ -1,0 +1,250 @@
+<html>
+    <head>
+        <link href="/style.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta property="type" content="website">
+
+        <!-- HTML Meta Tags -->
+        <title>Sonic: Lock & Load » Index</title>
+        <meta name="description" content="A hyper-fast character-action first-person shooter based on the Sonic the Hedgehog series of games and built on GZDoom.">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://sonic-lockandload.github.io/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Sonic: Lock & Load » Style System">
+        <meta property="og:description" content="A hyper-fast character-action first-person shooter based on the Sonic the Hedgehog series of games and built on GZDoom.">
+        <meta property="og:image" content="https://sonic-lockandload.github.io/TITLEPIC.png">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="sonic-lockandload.github.io">
+        <meta property="twitter:url" content="https://sonic-lockandload.github.io/">
+        <meta name="twitter:title" content="Sonic: Lock & Load » Style System">
+        <meta name="twitter:description" content="A hyper-fast character-action first-person shooter based on the Sonic the Hedgehog series of games and built on GZDoom.">
+        <meta name="twitter:image" content="https://sonic-lockandload.github.io/TITLEPIC.png">
+
+        <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+        
+        <script src="https://kit.fontawesome.com/56b6b2df41.js" crossorigin="anonymous"></script>
+        <title>Sonic: Lock &amp; Load » Style System</title>
+    </head>
+    <body>
+        <div id="header">
+            <a href="index.html"><img src="Sonic-LockandLoadLogo.png" id="logo"/></a>
+            <hr id="separator">
+        </div>
+        <div id="content">
+            <a href="index.html" style="position:absolute;">&lang; Back to main page</a>
+            <h1>Style System</h1>
+            <blockquote id="redquoteblock"> 
+                <strong>Is your memory card set correctly?</strong> <br>
+                This page describes a feature massively expanded in Sonic: Lock &amp; Load version v1.4.1, which is a future release. <br>
+                Proceed with caution and keep your expectations set low.
+            </blockquote>
+            <p>The style system, taking after the style system in games like Devil May Cry and ULTRAKILL, is integral to obtaining score and achieving high ranks in Sonic: Lock &amp; Load.</p>
+            <h2>Style Ranks</h2>
+            <p>The higher rank you get, the faster you'll regenerate Chaos Energy (if it's enabled in the options), and the faster your style points will decay.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Letter</th>
+                        <th>Rank Name</th>
+                        <th>Points Needed</th>
+                        <th>Decay Rate</th>
+                        <th>Energy Regen Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="center">[N/A]</td>
+                        <td>Empty</td>
+                        <td>0</td>
+                        <td>64</td>
+                        <td>Every 3 tics</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><img id="style-rank-img" src="stylerank/d_stylerank.png" alt="D"></td>
+                        <td style="color: #06b1f6"><strong>Drifting</strong></td>
+                        <td>25000</td>
+                        <td>320</td>
+                        <td>Every 3 tics</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><img id="style-rank-img" src="stylerank/c_stylerank.png" alt="C"></td>
+                        <td style="color: #00ee2d"><strong>Chaotic</strong></td>
+                        <td>50000</td>
+                        <td>576</td>
+                        <td>Every 3 tics</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><img id="style-rank-img" src="stylerank/b_stylerank.png" alt="B"></td>
+                        <td style="color: #ff6d00"><strong>Blazing</strong></td>
+                        <td>75000</td>
+                        <td>832</td>
+                        <td>Every 2 tics</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><img id="style-rank-img" src="stylerank/a_stylerank.png" alt="A"></td>
+                        <td style="color: #4d87ff"><strong>Accelerated</strong></td>
+                        <td>100000</td>
+                        <td>1088</td>
+                        <td>×2 every 2 tics</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><img id="style-rank-img" src="stylerank/s_stylerank.png" alt="S"></td>
+                        <td style="color: #F5FF59"><strong>Skyrocketing!</strong></td>
+                        <td>125000</td>
+                        <td>1344</td>
+                        <td>Every tic</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><img id="style-rank-img" src="stylerank/ss_stylerank.png" alt="SS"></td>
+                        <td style="color: #FFE759"><strong>Speedy Skills!!</strong></td>
+                        <td>150000</td>
+                        <td>1600</td>
+                        <td>×2 every tic</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><img id="style-rank-img" src="stylerank/sss_stylerank.png" alt="SSS"></td>
+                        <td style="color: #FFD259"><strong>Super Sonic Style!!!</strong></td>
+                        <td>175000</td>
+                        <td>1856</td>
+                        <td>×3 every tic</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><img id="style-rank-img" src="stylerank/u_stylerank.png" alt="U"></td>
+                        <td style="color: #cc1cff; font-size: 125%"><strong>UNDEFEATABLE</strong></td>
+                        <td>200000</td>
+                        <td>2112</td>
+                        <td>×3 every tic</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Style Bonuses</h2>
+            <p>During gameplay, when defeating enemies, you'll be awarded style bonuses by doing specific things, which will boost your style points and help you attain higher Style Ranks.</p>
+            <p>Bonuses marked with <strong>*</strong> will only appear in the messages list when an enemy is killed, but the bonus still applies according to the description.</p>
+            <p>Some bonuses add to your style points - others will multiply the bonus you get from dealing damage in the first place.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bonus</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>+<span id="stylebonus-kill">Kill</span></strong></td>
+                        <td>Kill</td>
+                        <td>Kill an enemy without going over its spawn health.</td>
+                        <td>×2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>+<span id="stylebonus-kill">Destroyed</span></strong></td>
+                        <td>Kill</td>
+                        <td>Kill an enemy with the damage amount going over its spawn health.</td>
+                        <td>×2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>+<span id="stylebonus-special">Parry</span></strong></td>
+                        <td>Special</td>
+                        <td>Parry a close-range attack with Caliburn, the Piko Piko Hammer or the Insta-Shield.</td>
+                        <td>+25000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>+<span id="stylebonus-special">Rules of Nature</span></strong></td>
+                        <td>Special</td>
+                        <td>Parry a close-range attack that would otherwise result in death.</td>
+                        <td>+37500</td>
+                    </tr>
+                    <tr>
+                        <td><strong>+<span id="stylebonus-special">Deflect</span></strong></td>
+                        <td>Special</td>
+                        <td>Parry a projectile attack with the Piko Piko Hammer.</td>
+                        <td>+25000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>+<span id="stylebonus-special">Not Today</span></strong></td>
+                        <td>Special</td>
+                        <td>Parry a projectile attack with the Piko Piko Hammer that would otherwise result in death.</td>
+                        <td>+37500</td>
+                    </tr>
+                    <tr>
+                        <td><strong>+<span id="stylebonus-kill">Royal Release</span></strong></td>
+                        <td>Kill</td>
+                        <td>Kill an enemy by parrying.</td>
+                        <td>+12500</td>
+                    </tr>
+                    <tr>
+                        <td><strong>+<span id="stylebonus-kill">Death From Above</span></strong></td>
+                        <td>Kill</td>
+                        <td>Kill an enemy while being up higher than them.</td>
+                        <td>×2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>+<span id="stylebonus-positional">Airstrike</span>*</strong></td>
+                        <td>Positional</td>
+                        <td>Damage a grounded enemy while being in the air.</td>
+                        <td>×1.3</td>
+                    </tr>
+                    <tr>
+                        <td><strong>+<span id="stylebonus-positional">Airshot</span>*</strong></td>
+                        <td>Positional</td>
+                        <td>Damage an airborne enemy while being on the ground.</td>
+                        <td>×2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>+<span id="stylebonus-positional">Un-gravitify</span>*</strong></td>
+                        <td>Positional</td>
+                        <td>Damage an enemy while both of you are airborne.</td>
+                        <td>×3</td>
+                    </tr>
+                    <tr>
+                        <td><strong>+<span id="stylebonus-positional">Sniped</span></strong></td>
+                        <td>Positional</td>
+                        <td>Kill an enemy from 2048 map units away.</td>
+                        <td>×2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>+<span id="stylebonus-positional">Sliding</span></strong></td>
+                        <td>Positional</td>
+                        <td>Damage an enemy while crouch sliding.</td>
+                        <td>×2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>+<span id="stylebonus-special">Taunt</span></strong></td>
+                        <td>Special</td>
+                        <td>Perform a taunt while looking at an enemy. Only works once per enemy.</td>
+                        <td>+25000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>+<span id="stylebonus-kill">Dominated</span></strong></td>
+                        <td>Kill</td>
+                        <td>Kill the enemy that you previously taunted at.</td>
+                        <td>×4</td>
+                    </tr>
+                    <tr>
+                        <td><strong>+<span id="stylebonus-special">Weapon Swap</span></strong></td>
+                        <td>Special</td>
+                        <td>Damage an enemy with a different weapon to the one you used last.</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td><strong>+<span id="stylebonus-special">Rocket Boost</span></strong></td>
+                        <td>Special</td>
+                        <td>As Sonic, perform a Homing Attack on a rocket fired from the Rocket Rioter.</td>
+                        <td>+12000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>+<span id="stylebonus-kill">It's Not Melee</span></strong></td>
+                        <td>Kill</td>
+                        <td>Kill an enemy by making them fall off-stage in the Cyber Space Arena.</td>
+                        <td>+20000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
