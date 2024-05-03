@@ -60,63 +60,64 @@
                         <td align="center">[N/A]</td>
                         <td>Empty</td>
                         <td>0</td>
-                        <td>64</td>
+                        <td>128</td>
+                        <!-- The decay rate goes up by 96 for each rank -->
                         <td>Every 3 tics</td>
                     </tr>
                     <tr>
                         <td align="center"><img id="style-rank-img" src="stylerank/d_stylerank.png" alt="D"></td>
                         <td style="color: #06b1f6"><strong>Drifting</strong></td>
                         <td>25000</td>
-                        <td>320</td>
+                        <td>224</td>
                         <td>Every 3 tics</td>
                     </tr>
                     <tr>
                         <td align="center"><img id="style-rank-img" src="stylerank/c_stylerank.png" alt="C"></td>
                         <td style="color: #00ee2d"><strong>Chaotic</strong></td>
                         <td>50000</td>
-                        <td>576</td>
+                        <td>320</td>
                         <td>Every 3 tics</td>
                     </tr>
                     <tr>
                         <td align="center"><img id="style-rank-img" src="stylerank/b_stylerank.png" alt="B"></td>
                         <td style="color: #ff6d00"><strong>Blazing</strong></td>
                         <td>75000</td>
-                        <td>832</td>
+                        <td>416</td>
                         <td>Every 2 tics</td>
                     </tr>
                     <tr>
                         <td align="center"><img id="style-rank-img" src="stylerank/a_stylerank.png" alt="A"></td>
                         <td style="color: #4d87ff"><strong>Accelerated</strong></td>
                         <td>100000</td>
-                        <td>1088</td>
+                        <td>512</td>
                         <td>×2 every 2 tics</td>
                     </tr>
                     <tr>
                         <td align="center"><img id="style-rank-img" src="stylerank/s_stylerank.png" alt="S"></td>
                         <td style="color: #F5FF59"><strong>Skyrocketing!</strong></td>
                         <td>125000</td>
-                        <td>1344</td>
+                        <td>608</td>
                         <td>Every tic</td>
                     </tr>
                     <tr>
                         <td align="center"><img id="style-rank-img" src="stylerank/ss_stylerank.png" alt="SS"></td>
                         <td style="color: #FFE759"><strong>Speedy Skills!!</strong></td>
                         <td>150000</td>
-                        <td>1600</td>
+                        <td>704</td>
                         <td>×2 every tic</td>
                     </tr>
                     <tr>
                         <td align="center"><img id="style-rank-img" src="stylerank/sss_stylerank.png" alt="SSS"></td>
                         <td style="color: #FFD259"><strong>Super Sonic Style!!!</strong></td>
                         <td>175000</td>
-                        <td>1856</td>
+                        <td>800</td>
                         <td>×3 every tic</td>
                     </tr>
                     <tr>
                         <td align="center"><img id="style-rank-img" src="stylerank/u_stylerank.png" alt="U"></td>
                         <td style="color: #cc1cff; font-size: 125%"><strong>UNDEFEATABLE</strong></td>
                         <td>200000</td>
-                        <td>2112</td>
+                        <td>896</td>
                         <td>×3 every tic</td>
                     </tr>
                 </tbody>
@@ -145,12 +146,12 @@
                         <td><strong>+<span id="stylebonus-kill">Destroyed</span></strong></td>
                         <td>Kill</td>
                         <td>Kill an enemy with the damage amount going over its spawn health.</td>
-                        <td>×2</td>
+                        <td>×2.5</td>
                     </tr>
                     <tr>
                         <td><strong>+<span id="stylebonus-special">Parry</span></strong></td>
                         <td>Special</td>
-                        <td>Parry a close-range attack with Caliburn, the Piko Piko Hammer or the Insta-Shield.</td>
+                        <td>Parry a close-range attack with Caliburn (Sonic), Piko Piko Hammer (Amy), Insta-Shield (Classic Sonic) or High Shovel (Shadow).</td>
                         <td>+25000</td>
                     </tr>
                     <tr>
@@ -162,13 +163,13 @@
                     <tr>
                         <td><strong>+<span id="stylebonus-special">Deflect</span></strong></td>
                         <td>Special</td>
-                        <td>Parry a projectile attack with the Piko Piko Hammer.</td>
+                        <td>As Amy, parry a projectile attack with the Piko Piko Hammer.</td>
                         <td>+25000</td>
                     </tr>
                     <tr>
                         <td><strong>+<span id="stylebonus-special">Not Today</span></strong></td>
                         <td>Special</td>
-                        <td>Parry a projectile attack with the Piko Piko Hammer that would otherwise result in death.</td>
+                        <td>As Amy, parry a projectile attack with the Piko Piko Hammer that would otherwise result in death.</td>
                         <td>+37500</td>
                     </tr>
                     <tr>
@@ -208,9 +209,15 @@
                         <td>×2</td>
                     </tr>
                     <tr>
-                        <td><strong>+<span id="stylebonus-positional">Sliding</span></strong></td>
+                        <td><strong>+<span id="stylebonus-positional">Blasted</span></strong></td>
                         <td>Positional</td>
-                        <td>Damage an enemy while crouch sliding.</td>
+                        <td>Kill an enemy up-close with the Kinetic Shotty (Sonic) or Quarternary Decimator (Shadow).</td>
+                        <td>×2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>+<span id="stylebonus-positional">Sliding</span>*</strong></td>
+                        <td>Positional</td>
+                        <td>Damage an enemy while crouch sliding (all characters) or Slide Dashing (Amy).</td>
                         <td>×2</td>
                     </tr>
                     <tr>
