@@ -1,13 +1,13 @@
 <html>
     <head>
         <link href="/style.css" rel="stylesheet">
-        <link rel="icon" type="image/x-icon" href="favicon.png">
+        <link rel="icon" type="image/x-icon" href="/favicon.png">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta property="type" content="website">
 		<meta property="url" content="https://sonic-lockandload.github.io">
-		<meta property="title" content="Sonic: Lock &amp; Load - Windows Instructions">
+		<meta property="title" content="Sonic: Lock &amp; Load - Linux Instructions">
         <meta property="author" content="Arsalan Kazmi">
-		<meta property="description" content="Instructions on how to install and play the game on Windows.">
+		<meta property="description" content="Instructions on how to install and play the game on Linux.">
         <meta property="image" content="banner.png">
         <meta property="image:type" content="image/png">
         <meta property="image:width" content="730">
@@ -27,26 +27,57 @@
             <ul>
                 <li>Flathub-enabled Linux system</li>
                 <li>Graphical environment (X11 or Wayland)</li>
+                <li><a href="https://flathub.org/apps/com.github.tchx84.Flatseal">Flatseal</a></li>
                 <li>DOOM II: Hell on Earth's <code>doom2.wad</code> (you can get DOOM II from <a href="https://store.steampowered.com/app/2300/DOOM_II/">Steam</a> or <a href="https://www.gog.com/en/game/doom_ii">GOG</a>)</li>
                 <li>Freedoom: Phase 2's <code>freedoom2.wad</code> if you don't want to use DOOM II</li>
+                <li><a href="https://lutris.net/">Lutris</a> (optional)</li>
             </ul>
             <p id="greenquoteblock">
-                <strong>Steam Deck users:</strong> Exit to Desktop Mode to install GZDoom and Sonic: Lock & Load. Keep in mind I don't own a Steam Deck myself, so official support is heavily limited. Your mileage may vary.
+                <strong>Steam Deck users:</strong> You need to switch to Desktop Mode to follow these instructions - you can't do it in Game Mode.
+                You can still add Sonic: Lock & Load as a non-Steam game later.
+                Keep in mind I don't own a Steam Deck myself, so official support is heavily limited. Your mileage may vary.
+            </p>
+            <p id="redquoteblock">
+                <strong>Important:</strong>
+                This guide will specifically focus on the Flatpak version of GZDoom.
+                If you're using something else, like the Ubuntu package or AppImage, some instructions may be different or outright incorrect.
+                Please note support is primarily offered for Flatpak users.
             </p>
             <h2>Installing GZDoom</h2>
-            <p id="redquoteblock"><strong>Note:</strong> While zdoom.org does host a Ubuntu version (as well as an AppImage, which I didn't know about) this guide will specifically focus on the Flatpak version of GZDoom.</p>
             <p>If your Linux distro has a graphical app store (GNOME Software or KDE's Discover), search for GZDoom there. If you're using a Steam Deck, GZDoom will be available in Discover.</p>
             <p>Otherwise, you can run <code>flatpak install org.zdoom.GZDoom</code> at the command line.</p>
             <h2>Setting up GZDoom</h2>
             <p>Navigate to <code>~/.var/app/org.zdoom.GZDoom/.config/gzdoom/</code> and drop <code>DOOM2.WAD</code> in there.</p>
+            <p>An easier way to do this is simply to enter the following command in your Terminal:</p>
+            <p><code>cp /path/to/DOOM2.WAD ~/.var/app/org.zdoom.GZDoom/.config/gzdoom/</code></p>
             <h2>Getting a copy of the game</h2>
-            <p>If you already know how to run GZDoom mods with the Flatpak version, the process is exactly the same.</p>
             <p>Simply <a href="/download.html">download the Standalone PK3</a> for the latest stable version or <code>git clone</code> the Sonic: Lock & Load repository for the latest development version.</p>
-            <p><strong>Make sure</strong> you put the downloaded PK3 or cloned repository somewhere in <code>~/.var/app/org.zdoom.GZDoom/</code>, such as <code>~/.var/app/org.zdoom.GZDoom/pwads/</code>.</p>
-            <h2>Running the game</h2>
+            <p>It's recommended you put the PK3 somewhere where it won't be lost, like in a "DOOM Mods" directory - don't put it in your home directory or Documents folder, and definitely don't keep it in Downloads.</p>
+            <p>To better integrate Sonic: Lock & Load with your GZDoom installation, you can alternatively place the PK3 inside <code>~/.var/app/org.zdoom.GZDoom/data/</code>.</p>
+            <h2>Granting GZDoom access to your files</h2>
+            <p id="greenquoteblock">
+                <strong>Yes, I know.</strong>
+                You technically don't need Flatseal for this - you can do it with <code>flatpak override org.zdoom.GZDoom --filesystem=home</code>.
+                But this is much easier, and this guide is aimed towards beginners who are new to Linux.
+                If you're comfortable doing this at the command line, do it at the command line. Otherwise, use Flatseal.
+            </p>
+            <p>Open Flatseal up and click "GZDoom (org.zdoom.GZDoom)". Scroll down until you reach the "Filesystem" heading.</p>
+            <p>There should be an option called "All user files (filesystem=home)" - enable it to make GZDoom's Flatpak aware of your home directory.</p>
+            <p>If you need to unrestrict more access to your system (which you shouldn't have to but it's not my perogative), you can additionally enable access to your system files, all installed libraries and executables, and system configurations, as well as anywhere else also.</p>
+            <h2>Adding and running the game in Lutris</h2>
+            <p>To make running the game a whole lot easier, using <a href="https://lutris.net/">Lutris</a>, click <strong>Add Game</strong> (the <code>+</code> icon) and select "Add locally installed game".</p>
+            <p>Then, fill out the "Game info" tab like so:</p>
+            <img class="framed" src="sll-lutris-gameinfo.png" alt="Name: Sonic: Lock & Load; Sort name: sonic; Runner: ZDoom (ZDoom DOOM Game Engine); Release year: 2021">
+            <p>And fill out the "Game options" tab like so:</p>
+            <img class="framed" src="sll-lutris-gameopts.png" alt="WAD file: /home/aeriavelocity/.var/app/org.zdoom.GZDoom/.config/gzdoom/DOOM2.WAD; Arguments: -file /home/aeriavelocity/.var/app/org.zdoom.GZDoom/data/Sonic-LockandLoad">
+            <p>If you want to add your PK3 file to the "PWAD files" list, that works too.</p>
+            <p>Afterwards, click "Save", and Sonic: Lock & Load should be available in your Lutris menu.</p>
+            <p>When that's done, right-click on it and select "Create application menu shortcut" to have Lutris make a desktop entry that'll be recognised by your system.</p>
+            <h2>Running the game without Lutris</h2>
+            <p>I cannot stress enough how much I <strong>HIGHLY RECOMMEND</strong> Lutris, but if you can't or dont want to use it, here's what you can do.</p>
             <p>Consider using <a href="https://github.com/lcferrum/qzdl/releases">ZDL</a> to make your life easier. Otherwise:</p>
-            <p>In your terminal, run <code>flatpak run org.zdoom.GZDoom --command=gzdoom -file ~/.var/app/org.zdoom.GZDoom/pwads/Sonic-LockandLoad-vX.X.X.pk3</code>, where <code>pwads/Sonic-LockandLoad-vX.X.X.pk3</code> is the path to the PK3 you downloaded or repository folder you cloned.</p>
-            <p>It probably helps to create a <code>.desktop</code> file that you can run directly - you can look up tutorials for that online.</p>
+            <p>In your terminal, run <code>flatpak run org.zdoom.GZDoom --command=gzdoom -file path/to/Sonic-LockandLoad-vX.X.X.pk3</code>, where <code>Sonic-LockandLoad-vX.X.X.pk3</code> is the PK3 you downloaded or repository folder you cloned.</p>
+            <p>It probably helps to create a <code>.desktop</code> file that you can run directly - you can look up tutorials for that online. (OR BETTER YET, YOU CAN DO IT WITH LUTRIS.)</p>
             <h2>And that's it!</h2>
             <p>You're now playing Sonic: Lock & Load. Have fun with it, and don't forget to configure the options in case you want to!</p>
             <p>If you have any feedback, <a href="https://github.com/sonic-lockandload/sonic-lockandload/issues/new/choose">open an issue on Sonic: Lock & Load's GitHub</a>.</p>
