@@ -50,6 +50,7 @@
                     <tr>
                         <th>Letter</th>
                         <th>Rank Name</th>
+                        <th>Score Multiplier</th>
                         <th>Points Needed</th>
                         <th>Decay Rate</th>
                         <th>Energy Regen Rate</th>
@@ -59,6 +60,7 @@
                     <tr>
                         <td align="center">[N/A]</td>
                         <td>Empty</td>
+                        <td>x1</td>
                         <td>0</td>
                         <td>128</td>
                         <!-- The decay rate goes up by 96 for each rank -->
@@ -67,6 +69,7 @@
                     <tr>
                         <td align="center"><img id="style-rank-img" src="stylerank/d_stylerank.png" alt="D"></td>
                         <td style="color: #06b1f6"><strong>Drifting</strong></td>
+                        <td style="color: #06b1f6">x2</td>
                         <td>25000</td>
                         <td>224</td>
                         <td>Every 3 tics</td>
@@ -74,6 +77,7 @@
                     <tr>
                         <td align="center"><img id="style-rank-img" src="stylerank/c_stylerank.png" alt="C"></td>
                         <td style="color: #00ee2d"><strong>Chaotic</strong></td>
+                        <td style="color: #00ee2d">x3</td>
                         <td>50000</td>
                         <td>320</td>
                         <td>Every 3 tics</td>
@@ -81,6 +85,7 @@
                     <tr>
                         <td align="center"><img id="style-rank-img" src="stylerank/b_stylerank.png" alt="B"></td>
                         <td style="color: #ff6d00"><strong>Blazing</strong></td>
+                        <td style="color: #ff6d00">x4</td>
                         <td>75000</td>
                         <td>416</td>
                         <td>Every 2 tics</td>
@@ -88,6 +93,7 @@
                     <tr>
                         <td align="center"><img id="style-rank-img" src="stylerank/a_stylerank.png" alt="A"></td>
                         <td style="color: #4d87ff"><strong>Accelerated</strong></td>
+                        <td style="color: #4d87ff">x5</td>
                         <td>100000</td>
                         <td>512</td>
                         <td>×2 every 2 tics</td>
@@ -95,6 +101,7 @@
                     <tr>
                         <td align="center"><img id="style-rank-img" src="stylerank/s_stylerank.png" alt="S"></td>
                         <td style="color: #F5FF59"><strong>Skyrocketing!</strong></td>
+                        <td style="color: #F5FF59">x6</td>
                         <td>125000</td>
                         <td>608</td>
                         <td>Every tic</td>
@@ -102,6 +109,7 @@
                     <tr>
                         <td align="center"><img id="style-rank-img" src="stylerank/ss_stylerank.png" alt="SS"></td>
                         <td style="color: #FFE759"><strong>Speedy Skills!!</strong></td>
+                        <td style="color: #FFE759">x7</td>
                         <td>150000</td>
                         <td>704</td>
                         <td>×2 every tic</td>
@@ -109,6 +117,7 @@
                     <tr>
                         <td align="center"><img id="style-rank-img" src="stylerank/sss_stylerank.png" alt="SSS"></td>
                         <td style="color: #FFD259"><strong>Super Sonic Style!!!</strong></td>
+                        <td style="color: #FFD259">x8</td>
                         <td>175000</td>
                         <td>800</td>
                         <td>×3 every tic</td>
@@ -116,6 +125,7 @@
                     <tr>
                         <td align="center"><img id="style-rank-img" src="stylerank/u_stylerank.png" alt="U"></td>
                         <td style="color: #cc1cff; font-size: 125%"><strong>UNDEFEATABLE</strong></td>
+                        <td style="color: #cc1cff">x9</td>
                         <td>200000</td>
                         <td>896</td>
                         <td>×3 every tic</td>
@@ -153,6 +163,12 @@
                         <td>Special</td>
                         <td>Parry a close-range attack with Caliburn (Sonic), Piko Piko Hammer (Amy), Insta-Shield (Classic Sonic) or High Shovel (Shadow).</td>
                         <td>+25000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>+<span id="stylebonus-special">Risk Parry</span></strong></td>
+                        <td>Special</td>
+                        <td>Parry an attack with Classic Sonic's Insta-Shield while healing.</td>
+                        <td>+42500</td>
                     </tr>
                     <tr>
                         <td><strong>+<span id="stylebonus-special">Rules of Nature</span></strong></td>
@@ -219,6 +235,12 @@
                         <td>Positional</td>
                         <td>Damage an enemy while crouch sliding (all characters) or Slide Dashing (Amy).</td>
                         <td>×2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>+<span id="stylebonus-positional">Rebounded</span></strong></td>
+                        <td>Positional</td>
+                        <td>Successfully perform an Enemy Jump (wall jump off an enemy).</td>
+                        <td>+18000</td>
                     </tr>
                     <tr>
                         <td><strong>+<span id="stylebonus-special">Taunt</span></strong></td>
