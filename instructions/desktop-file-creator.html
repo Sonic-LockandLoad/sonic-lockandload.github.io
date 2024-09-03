@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/style.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="/favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="type" content="website">
+        <meta property="url" content="https://sonic-lockandload.github.io">
+        <meta property="title" content="Sonic: Lock &amp; Load - Desktop File Creator">
+        <meta property="author" content="Arsalan Kazmi">
+        <title>Sonic: Lock &amp; Load » Desktop File Creator</title>
+    </head>
+    <body>
+        <div id="header">
+            <a href="/index.html"><img src="/Sonic-LockandLoadLogo.png" id="logo"/></a>
+            <hr id="separator">
+        </div>
+        <div id="content">
+            <h1>Desktop File Creator</h1>
+            <p>This tool will ask you a few questions, and then generate a <code>.desktop</code> file to run Sonic: Lock &amp; Load on Linux systems or other systems that adhere to the XDG Desktop Entry Specification.</p>
+            <p>If you want to run Sonic: Lock &amp; Load on Windows or macOS, this generator isn't useful for you - for Windows, just create a shortcut, and for macOS, I'm sure you can figure it out.</p>
+            <h2>Are you using Flatpak?</h2>
+            <form name="flatpak">
+                <p>If unsure, select <strong>Yes, use <code>flatpak run org.zdoom.GZDoom</code></strong>.</p>
+                <input type="radio" id="yes" name="flatpak" value="yes" checked>
+                <label for="yes">Yes, use <code>flatpak run org.zdoom.GZDoom</code></label><br>
+                <input type="radio" id="no" name="flatpak" value="no">
+                <label for="no">No, use <code>gzdoom</code></label><br>
+            </form>
+            <h2>What's your username?</h2>
+            <form name="username">
+                <input type="text" id="username" name="username" value="username">
+                <p>To find out your username, run <code>whoami</code> in the terminal.</p>
+            </form>
+            <form name="version">
+                <h2>Which version of Sonic: Lock &amp; Load are you using?</h2>
+                <input type="radio" id="latest" name="version" value="latest" checked>
+                <label for="latest">v1.4.1 "Vibrant Horizons" (PK3)</label><br>
+                <input type="radio" id="edge" name="version" value="edge">
+                <label for="git">Edge (PK3)</label><br>
+                <input type="radio" id="git" name="version" value="git">
+                <label for="git"><code>Sonic-LockandLoad</code> folder</label><br>
+                <input type="radio" id="other" name="version" value="other">
+                <label for="other">Other: </label>
+                <input type="text" id="other" name="other">
+            </form>
+            <h2>Where did you place Sonic: Lock &amp; Load?</h2>
+            <form name="location">
+                <p>This is where <code id="filename">Sonic-LockandLoad-v1.4.1.pk3</code> is located.</p>
+                <input type="radio" id="home" name="location" value="home" checked>
+                <label for="home">My home folder, <code id="homedir">$HOME/</code></label><br>
+                <input type="radio" id="desktop" name="location" value="desktop">
+                <label for="desktop">My desktop folder, <code id="desktopdir">$HOME/Desktop/</code></label><br>
+                <input type="radio" id="other" name="location" value="other">
+                <label for="other">Somewhere else: </label>
+                <input type="text" id="other" name="other">
+            </form>
+            <h2>Generated .desktop File</h2>
+            <p>Place this file inside <code id="desktop-file-location">$HOME/.local/share/applications/</code>.</p>
+            <textarea name="file" id="desktop-file" cols="30" rows="10" id="desktop-file"></textarea>
+            <br>
+            <button id="download" onclick="downloadFile()">Download .desktop File</button>
+            <script>
+                const template = `[Desktop Entry]
+Name=Sonic: Lock & Load ({VERSION_NAME})
+Comment=A hyper-fast stylish action first-person shooter based on the Sonic the Hedgehog series of games and built on GZDoom.
+Exec={GZDOOM_COMMAND} -file {FILE_PATH}
+Icon=icon.png
+Terminal=false
+Type=Application
+Categories=Game;`
+
+                document.addEventListener('DOMContentLoaded', () => {
+                    const flatpakForm = document.querySelector('form[name="flatpak"]');
+                    const usernameForm = document.querySelector('form[name="username"]');
+                    const locationForm = document.querySelector('form[name="location"]');
+                    const versionForm = document.querySelector('form[name="version"]');
+                    const desktopFileTextArea = document.querySelector('#desktop-file');
+
+                    flatpakForm.addEventListener('change', generateDesktopFile);
+                    usernameForm.addEventListener('input', generateDesktopFile);
+                    locationForm.addEventListener('change', generateDesktopFile);
+                    versionForm.addEventListener('change', generateDesktopFile);
+
+                    locationForm.querySelector('input[name="other"]')
+                        .addEventListener('input', generateDesktopFile);
+                    versionForm.querySelector('input[name="other"]')
+                        .addEventListener('input', generateDesktopFile);
+
+                    function generateDesktopFile() {
+                        const flatpak = flatpakForm.querySelector('input[name="flatpak"]:checked').value;
+                        const username = usernameForm.querySelector('input[name="username"]').value;
+                        const location = locationForm.querySelector('input[name="location"]:checked').value;
+                        const version = versionForm.querySelector('input[name="version"]:checked').value;
+
+                        let command = 'gzdoom';
+                        if (flatpak === 'yes') {
+                            command = 'flatpak run org.zdoom.GZDoom --command=gzdoom';
+                        }
+
+                        let fileName = 'Sonic-LockandLoad';
+                        if (version === 'latest') {
+                            fileName = 'Sonic-LockandLoad-v1.4.1.pk3';
+                        }
+                        else if (version === 'edge') {
+                            fileName = 'Sonic-LockandLoad-edge.pk3';
+                        }
+                        else if (version === 'git') {
+                            fileName = 'Sonic-LockandLoad/';
+                        }
+                        else if (version === 'other') {
+                            fileName = 'Sonic-LockandLoad-' + versionForm.querySelector('input[name="other"]').value + '.pk3';
+                        }
+
+                        console.log(fileName);
+
+                        let filePath = `/home/${username}/`;
+                        if (location === 'desktop') {
+                            filePath = `/home/${username}/Desktop/`;
+                        }
+                        else if (location === 'other') {
+                            filePath = locationForm.querySelector('input[name="other"]').value + '/';
+                        }
+
+                        desktopFileTextArea.value = template
+                            .replace('{VERSION_NAME}', version)
+                            .replace('{GZDOOM_COMMAND}', command)
+                            .replace('{FILE_PATH}', filePath + fileName);
+
+                        document.getElementById('desktop-file-location').innerText = `/home/${username}/.local/share/applications/`;
+                        document.getElementById('filename').innerText = fileName;
+                        document.getElementById('homedir').innerText = `/home/${username}/`;
+                        document.getElementById('desktopdir').innerText = `/home/${username}/Desktop`;
+                    }
+
+                    generateDesktopFile();
+                });
+
+                function downloadFile() {
+                    const desktopFile = document.querySelector('#desktop-file').value;
+                    const blob = new Blob([desktopFile], { type: 'text/plain' });
+                    const url = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = 'Sonic-LockandLoad.desktop';
+                    link.click();
+                }
+            </script>
+        </div>
+</html>
