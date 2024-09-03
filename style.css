@@ -16,6 +16,51 @@ h1, h2, h3 {
     font-weight: 600;
 }
 
+code {
+    font-family: "Source Code Pro", "Menlo", "Consolas", monospace;
+    font-size: 18px;
+    background-color: #00000033;
+    border-radius: 6px;
+    padding: 3px 5px;
+}
+
+form {
+    font-size: 18px;
+    line-height: 2;
+    padding: 10px;
+    margin: auto 30px;
+    input {
+        font-family: "Source Code Pro", "Menlo", "Consolas", monospace;
+        font-size: 18px;
+        background-color: #0f0f0f;
+        border: 1px solid #000000;
+        color: white;
+        align-items: center;
+        text-decoration: none;
+        margin-left: 5px;
+        padding: 4px 6px;
+        transition: .2s;
+        border-radius: 0 6px 0;
+    }
+    input:hover {
+        border-radius: 6px;
+    }
+}
+
+textarea {
+    font-family: "Source Code Pro", "Menlo", "Consolas", monospace;
+    font-size: 16px;
+    border: 1px solid #000000;
+    color: white;
+    background-color: #0f0f0f;
+    align-items: center;
+    text-decoration: none;
+    padding: 4px 6px;
+    transition: .2s;
+    border-radius: 0 12px 0;
+    width: 100%;
+}
+
 table {
     width: 100%;
     font-size: 18px;
@@ -309,6 +354,11 @@ gpd {
     a:active { color: #6666FF; }
     hr {
         background-color: #0000009c;
+    }
+    input, textarea {
+        color: #333333;
+        background-color: #FFFFFF;
+        border-color: #cacaca;
     }
     #download-link { color: #454545; }
     table {
